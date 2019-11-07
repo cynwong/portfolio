@@ -1,4 +1,6 @@
-body{
+@import url('https://fonts.googleapis.com/css?family=Cedarville+Cursive&display=swap');
+
+html, body{
 
     /* color picked from https://picsum.photos/id/959/3699/2466 */
     /* Red  */
@@ -20,15 +22,36 @@ body{
     /* default styles */
     background-color: var(--color-darkslategray);
     color: var(--color-pink);
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana,"Arial", sans-serif;
     font-size: 16pt;
+}
+header {
+    min-height: 70px;
+    padding: 5px;
+}
+
+header h1.site-title{
+    margin-top: 1rem;
+    margin-left: 1.5rem;
+    font-size: xx-large;
+    font-family: 'Cedarville Cursive', cursive;
+    font-weight: 900;
 }
 
 section.about{
-    position:relative;
+    /* position:relative; */
     overflow: hidden;
 
     text-align: center;
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://picsum.photos/id/959/3699/2466");
+    height: 50vh;
+    width: 100%;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 }
 
 section.about img.background-img{
@@ -40,16 +63,24 @@ section.about img.background-img{
     opacity: 0.3;
 }
 
-section.about .heading2{
-    padding: 200px;
-    position: relative;
+section.about .heading{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    color: var(--color-pink);
     z-index: 5;
-    font-size: 2.5rem;
+}
+
+section.about .heading h2{
+    font-size: 2rem;
     line-height: 3rem;
 }
 
-section.about .heading2 p{
-    font-size: 2rem ;
+section.about .heading p{
+    font-size: 1.5rem ;
+    line-height: 1.5rem;
 }
 
 
