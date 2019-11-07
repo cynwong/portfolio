@@ -1,0 +1,104 @@
+body{
+
+    /* color picked from https://picsum.photos/id/959/3699/2466 */
+    /* Red  */
+    --color-pink: hsl(338deg, 76%, 86%);
+    --color-darkslatereddishgray: hsl(347,21%,21%);
+
+    /* Green */
+    --color-palegoldenrod: hsl(76deg, 54%, 83%);
+    --color-lightgray: hsl(61deg, 32%, 79%);
+    --color-slategray: hsl(183deg, 13%,44%);
+    --color-darkolivegreen: hsl(32deg, 7%,31%);
+
+    /* Blue */
+    --color-powderblue: hsl(180deg, 48%, 80%);
+
+    /* Grays */
+    --color-darkslategray: hsl(0deg, 6%,6%);
+
+    /* default styles */
+    background-color: var(--color-darkslategray);
+    color: var(--color-pink);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 16pt;
+}
+
+section.about{
+    position:relative;
+    overflow: hidden;
+
+    text-align: center;
+}
+
+section.about img.background-img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0.3;
+}
+
+section.about .heading2{
+    padding: 200px;
+    position: relative;
+    z-index: 5;
+    font-size: 2.5rem;
+    line-height: 3rem;
+}
+
+section.about .heading2 p{
+    font-size: 2rem ;
+}
+
+
+/* https://picsum.photos/id/237/3500/2095
+https://picsum.photos/id/306/1024/768
+*/
+
+
+
+/*  Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
+    body{
+        font-size: 12px;
+    }
+    section.about .heading2{
+        padding: 3.5rem;
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+    }
+    section.about .heading2 p{
+        font-size: 1rem;
+    }
+    
+}
+
+ /* Small devices (landscape phones, less than 768px) */
+@media (min-width: 576 and max-width: 767.98px) {
+    body{
+        font-size: 14px;
+    }
+    section.about .heading2{
+        padding: 2.5rem;
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+    }
+    section.about .heading2 p{
+        font-size: 1rem;
+    }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (min-width: 767px and max-width: 991.98px) { 
+    section.about .heading2{
+        padding: 2.5rem;
+        font-size: 2rem;
+        line-height: 1.5rem;
+    }
+    section.about .heading2 p{
+        font-size: 1.5rem;
+    }
+}
+
