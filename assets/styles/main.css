@@ -1,37 +1,47 @@
 @import url('https://fonts.googleapis.com/css?family=Cedarville+Cursive&display=swap');
 
 html, body{
+    --color-secondary: 20deg, 100%;
+    --color-secondary-1:hsl(var(--color-secondary),90%);
+    --color-secondary-2: hsl(var(--color-secondary),83%);
+    --color-secondary-3: hsl(var(--color-secondary),78%);
+    --color-secondary-4: hsl(var(--color-secondary),57%);
+    --color-secondary-5: hsl(var(--color-secondary),25%);
 
-    /* color picked from https://picsum.photos/id/959/3699/2466 */
-    /* Red  */
-    --color-pink: hsl(338deg, 76%, 86%);
-    --color-darkslatereddishgray: hsl(347,21%,21%);
+    --color-primary: 157deg, 17%;
+    --color-primary-1:hsl(var(--color-primary),93%);
+    --color-primary-2:hsl(var(--color-primary),77%);
+    --color-primary-3:hsl(var(--color-primary),46%);
+    --color-primary-4:hsl(var(--color-primary),38%);
+    --color-primary-5:hsl(var(--color-primary),21%);
 
-    /* Green */
-    --color-palegoldenrod: hsl(76deg, 54%, 83%);
-    --color-lightgray: hsl(61deg, 32%, 79%);
-    --color-slategray: hsl(183deg, 13%,44%);
-    --color-darkolivegreen: hsl(32deg, 7%,31%);
 
-    /* Blue */
-    --color-powderblue: hsl(180deg, 48%, 80%);
-
-    /* Grays */
-    --color-darkslategray: hsl(0deg, 6%,6%);
+    --color-gray: 0deg, 0%;
+    --color-gray-1:hsl(var(--color-gray),95%);
+    --color-gray-2:hsl(var(--color-gray),85%);
+    --color-gray-3:hsl(var(--color-gray),77%);
+    --color-gray-4:hsl(var(--color-gray),59%);
+    --color-gray-5:hsl(var(--color-gray),47%);
+    --color-gray-6: hsl(var(--color-gray),28%);
+    --color-gray-7: hsl(var(--color-gray),15%);
+    --color-gray-8: hsl(var(--color-gray),7%);
+    --color-gray-9: hsl(var(--color-gray),2%);
 
     /* default styles */
-    background-color: var(--color-darkslategray);
-    color: var(--color-pink);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana,"Arial", sans-serif;
     font-size: 16pt;
 
     /* layout */
     display:flex;
     flex-direction: column;
+
+    height: 100vh;
 }
 
 
 header {
+    color: var(--color-secondary-2);
+    background-color: var(--color-primary-4);
     min-height: 70px;
     padding: 5px;
     flex: none;
@@ -41,7 +51,11 @@ header h1.site-title{
     margin: 0.5rem 1.5rem;
     font-size: 1.5rem;
     font-family: 'Cedarville Cursive', cursive;
-    font-weight: 900;
+    /* font-weight: 900; */
+}
+
+header h1.site-title:hover {
+    font-weight:900;
 }
 
 nav.page-navs{
@@ -72,10 +86,19 @@ nav.page-navs ul.navbar li{
 nav.page-navs ul.navbar li > a{
     text-decoration: none;
     color: var(--color-darkolivegreen);
-    vertical-align:middle;
-    padding:5px 10px;
+    vertical-align: middle;
+    padding: 5px 10px;
     border-radius: 5px;
+    margin-top: 0.5rem;
+    height:100%;
 }
+
+main {
+    background-color: var(--color-primary-1);
+    flex-basis: 70%;
+    flex-grow: 9999;
+}
+
 section.about{
     /* position:relative; */
     overflow: hidden;
