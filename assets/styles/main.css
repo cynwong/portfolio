@@ -24,20 +24,58 @@ html, body{
     color: var(--color-pink);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana,"Arial", sans-serif;
     font-size: 16pt;
+
+    /* layout */
+    display:flex;
+    flex-direction: column;
 }
+
+
 header {
     min-height: 70px;
     padding: 5px;
+    flex: none;
 }
 
 header h1.site-title{
-    margin-top: 1rem;
-    margin-left: 1.5rem;
-    font-size: xx-large;
+    margin: 0.5rem 1.5rem;
+    font-size: 1.5rem;
     font-family: 'Cedarville Cursive', cursive;
     font-weight: 900;
 }
 
+nav.page-navs{
+    height:2.5rem;
+    box-sizing: border-box;
+}
+
+nav.page-navs ul.navbar{
+    height:100%;
+    display:flex;
+    flex-direction: row;
+    vertical-align:middle;
+    background-color:var(--color-powderblue);
+    padding:5px;
+    box-sizing: border-box;
+}
+
+nav.page-navs ul.navbar li{
+    display: inline-block;
+    height:100%;
+    vertical-align:middle;
+    text-align: center;
+    cursor:pointer;
+    padding:5px;
+    
+}
+
+nav.page-navs ul.navbar li > a{
+    text-decoration: none;
+    color: var(--color-darkolivegreen);
+    vertical-align:middle;
+    padding:5px 10px;
+    border-radius: 5px;
+}
 section.about{
     /* position:relative; */
     overflow: hidden;
@@ -84,6 +122,19 @@ section.about .heading p{
 }
 
 
+
+.template{
+    display:none;
+}
+
+
+.container{
+    margin:7px;
+    margin-top: 17px;
+    display:block;
+    box-sizing: border-box;
+
+}
 /* https://picsum.photos/id/237/3500/2095
 https://picsum.photos/id/306/1024/768
 */
