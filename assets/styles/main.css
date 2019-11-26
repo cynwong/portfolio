@@ -48,7 +48,7 @@ html, body{
 header {
     color: var(--color-secondary-2);
     background-color: var(--color-primary-4);
-    border-bottom: 3px solid var(--color-secondary-4);
+    border-bottom: 3px solid var(--color-secondary-3);
     min-height: 70px;
     padding: 0;
     flex: none;
@@ -77,7 +77,7 @@ header {
 header .site-title{
     margin-top: 20px;
     margin-bottom:10px;
-    text-align: center;
+    margin-left: 10px;
 }
 header .site-title h1{
     /* margin: 0.5rem 1.5rem 0.8rem; */
@@ -92,6 +92,7 @@ header .site-title p{
 }
 .page-navs{
     padding-left: 25px;
+    text-align:right;
 }
 
 .btn-nav{
@@ -100,53 +101,41 @@ header .site-title p{
     border: none;
     outline:none;
     cursor:pointer;
-    padding: 14px 16px;
+    padding: 9px 16px;
     font-size:1.05rem;
 }
 
 .btn-nav:hover{
     font-weight: bold;
-    /* border-bottom: 2px solid var(--color-secondary-4); */
 }
 
 .btn-nav.current{
-    background-color: var(--color-secondary-4);
-    color: var(--color-primary-5);
+    background-color: var(--color-secondary-3);
+    color: var(--color-primary-4);
     border-radius: 15px 15px 0 0;
 }
 
 .btn-nav.current:hover{
     cursor:default;
+    font-weight:normal;
 }
 
 /* Main Section */
 main {
     background-color: var(--color-primary-1);
     flex-grow: 9999;
-    min-height: 85vh;
+    min-height: calc(100vh - 175px);
+    overflow: scroll;
+    border-left: 2px solid var(--color-secondary-3);
+    border-right: 2px solid var(--color-secondary-3);
 }
 main section{
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-    box-shadow: 0px 0px 6px var(--color-secondary-4);
-    background-color: var(--color-gray-1);
+    height: 100%;
+    background-color:transparent;
     line-height: 1.3rem;
-}
-
-section .section-title{
-    background-color: var(--color-secondary-4);
-    min-height: 3.5rem;
-    height: fit-content;
-}
-
-section .section-title h2{
-    padding-top: 22px;
-    padding-left: 10px;
-    font-family: 'Spicy Rice', cursive;
-    font-size: 2rem;
-    color: var(--color-primary-1);
-    text-shadow: 2px 2px 8px var(--color-gray-9);
 }
 
 section .section-content{
@@ -154,10 +143,20 @@ section .section-content{
     text-align: justify;
     line-height: 1.5rem;
     color: var(--color-primary-5);
-    min-height: 90vh;
 }
 
-.template{
+#contact-section .contact{
+    margin-bottom: 1.5rem;
+    color: var(--color-secondary-5);
+}
+#contact-section .contact a{
+    text-decoration: none;
+    color: var(--color-secondary-5);
+    cursor:pointer;
+}
+
+
+.template, .hidden{
     display:none;
 }
 
@@ -175,7 +174,7 @@ section .section-content{
 footer{
     color: var(--color-secondary-2);
     background-color: var(--color-primary-4);
-    border-top: 3px solid var(--color-secondary-4);
+    border-top: 3px solid var(--color-secondary-3);
     min-height: 35px;
     padding: 5px;
     flex: none;
