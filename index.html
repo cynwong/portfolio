@@ -29,18 +29,18 @@
 
 <body>
     <header>
-        <button class="btn-mini-nav">&#9776;</button>
         <div class="site-title">
             <h1 class="site-title">Cynthia Wong</h1>
             <p>Full Stack Developer</p>
         </div>
+        <button class="btn-mini-nav">&#9776;</button>
         <nav class="page-navs">
             <button id="btn-about" class="btn-nav current">
                     <i class="fa fa-id-badge"></i> 
                     About
             </button>
             <button id= "btn-portfolio" class="btn-nav">
-                    <i class="fa fa-folder-open"></i> 
+                    <i class="fa fa-images"></i> 
                     Portfolio
             </button>
             <button id= "btn-contact" class="btn-nav">
@@ -52,9 +52,6 @@
 
     <main>
         <section id="about-section">
-            <!-- <div class="section-title">
-                <h2>Who is Cynthia?</h2>
-            </div> -->
             <div class="section-content">
                 <p>Cynthia is a Full-Stack Web Developer.</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium harum accusantium doloribus,
@@ -65,29 +62,28 @@
                     omnis.</p>
             </div>
         </section>
-        <section id="projects-section">
+        <section id="portfolio-section" class="hidden">
             <div class="card template">
-                <div class="card-image">
-                    <figure class="image is-4by3">
-                        <img src="https://via.placeholder.com/350" alt="Placeholder image">
-                    </figure>
-                </div>
+                <figure class="card-figure">
+                    <img src="https://via.placeholder.com/350" alt="Placeholder image">
+                </figure>
                 <div class="card-content">
-                    <div class="content">
-                        <p class="card-title"></p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-                        <a href="#">#css</a> <a href="#">#responsive</a>
-                        <br>
-                        <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                    <h5 class="card-title"></h5>
+                    <p class="card-tags"></p>
+                    <p class="card-body"></p>
+                    <a href="" class="btn btn-link">Visit Site &gt;</a>
                     </div>
-                </div>
             </div>
             <div id="projects-container"></div>
         </section>
 
-        <section id="contact-section">
+        <section id="contact-section" class="hidden">
+            <div class="section-content">
+                <div class="contact email"><i class="fas fa-envelope icon"></i> : <a href="mailto:cynthiaswong88@gmail.com">cynthiaswong88@gmail.com</a></div>
+                <div class="contact github"><i class="fab fa-github icon"></i> : <a href="https://github.com/cynwong">github.com/cynwong</a></div>
 
+                <div id="contact-me"><a href="mailto:cynthiaswong88@gmail.com" class="btn btn-contact">Contact Me</a></div>
+            </div>
         </section>
     </main>
 
@@ -103,7 +99,7 @@
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
     <script src="./assets/js/data.js"></script>
-    <!-- <script src="./assets/js/on_load.js"></script> -->
+    <script src="./assets/js/on_load.js"></script>
 
 
 </body>
