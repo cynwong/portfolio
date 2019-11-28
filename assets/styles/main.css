@@ -89,6 +89,8 @@ header .site-title p{
     font-size: 0.7rem;
     font-family: "Roboto Mono", "Anonymous Pro", "Space Mono", monospace;
     margin-left: 50px;
+    color:var(--color-gray-9);
+    text-shadow: 0 0 8px var(--color-gray-1);
 }
 .page-navs{
     padding-left: 25px;
@@ -140,11 +142,17 @@ main section{
 
 section .section-content{
     padding: 2rem 1.2rem;
-    text-align: justify;
+    /* text-align: justify; */
     line-height: 1.5rem;
     color: var(--color-primary-5);
 }
 
+#about-section .section-content p{
+    color: var(--color-gray-7);
+}
+#about-section .section-content p:not(:last-child){
+    margin-bottom:1rem;
+}
 #contact-section .contact{
     margin-bottom: 1.5rem;
     color: var(--color-secondary-5);
