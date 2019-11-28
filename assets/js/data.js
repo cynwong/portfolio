@@ -24,8 +24,8 @@ const PORTFOLIO_DATA = [
         imgURL: "./assets/images/day_planner.png",
         githubURL: "",
         deployedURL: "https://cynwong.github.io/day_planner/",
-        description: "Day Planner is a mini project where work day schelduler is created for the user to save their daily tasks.",
-        tags: ["HTML", "HTML5", "CSS", "CSS3", "Bootstrap", "Font-awesome", "JavaScript", "jQuery", "LocalStorage", "moment.js"]
+        description: "A mini project where users can save their daily tasks.",
+        tags: ["HTML", "HTML5", "CSS", "CSS3", "Bootstrap", "Font-awesome", "JavaScript", "jQuery", "moment.js"]
 
     },
     {
@@ -34,8 +34,8 @@ const PORTFOLIO_DATA = [
         imgURL: "./assets/images/searchy.png",
         githubURL: "",
         deployedURL: "https://cynwong.github.io/day_planner/",
-        description: "Searchy is a group project where I am responsible for rendition of the API's repsonse data into the application data.",
-        tags: ["HTML", "HTML5", "CSS", "CSS3", "Bulma", "JavaScript", "jQuery", "LocalStorage", "moment.js", "AJAX", "Promise", "API", "Open Weather API"]
+        description: "A group project where I was responsible for rendition of the API's repsonse data into the application data.",
+        tags: ["HTML", "HTML5", "CSS", "CSS3", "Bulma", "JavaScript", "jQuery", "moment.js", "API", "Open Weather API"]
 
     },
 ];
