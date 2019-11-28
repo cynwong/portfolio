@@ -29,27 +29,28 @@ const generatePortfolio = function () {
 
     //prepare the card for user display
     for (let project of PORTFOLIO_DATA) {
+        console.log(project)
         const {
             name,
-            imgLogo,
+            imgAlt,
             imgURL,
             deployedURL: url,
             description,
             tags: tagNames
         } = project;
-        const $card = $section.find(".card.template").clone().removeClass("template");
-        const $img = $card.find(".card-figure img");
-        $img.attr("src", imgURL);
-        $img.attr("alt", imgLogo);
         const tags = [];
+        const $card = $section.find(".card.template").clone().removeClass("template");
+        const $img = $card.find(".card-image img");
+
+        $img.attr("src", imgURL);
+        $img.attr("alt", imgAlt);
+
+        $card.find(".card-title").text(name);
+        console.log(name)
+        
         for (let tagName of tagNames) {
             let classes = "tag tag-icon ";
-            const faClasses = BRAND_FA_CLASSES[tagName.toLowerCase()];
-            //check if we have icon 
-            if(faClasses){
-                //if we have class, add class
-                classes += faClasses;
-            }
+            
             tags.push(
                 $("<span>", {
                     class: classes,
