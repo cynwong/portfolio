@@ -15,7 +15,7 @@
 
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/c35f93028f.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"> -->
 
     <!-- stylesheets -->
     <link rel="stylesheet" href="./assets/styles/reset.css">
@@ -63,17 +63,21 @@
         </section>
         <section id="portfolio-section" class="hidden">
             <div class="card template">
-                <figure class="card-figure">
-                    <img src="https://via.placeholder.com/350" alt="Placeholder image">
-                </figure>
+                <picture class="card-image">
+                        <img src="https://via.placeholder.com/350" alt="Placeholder image">
+                </picture>
                 <div class="card-content">
                     <h5 class="card-title"></h5>
-                    <p class="card-tags"></p>
+                    <div class="card-tags"></div>
                     <p class="card-body"></p>
                     <a href="" class="btn btn-link">Visit Site &gt;</a>
                     </div>
             </div>
-            <div id="projects-container"></div>
+            <div id="projects-container" class="section-content"></div>
+            <div id="project-detail">
+                <h2 id="project-title"></h2>
+
+            </div>
         </section>
 
         <section id="contact-section" class="hidden">
@@ -90,8 +94,8 @@
 
     </section>
     <footer>
-        <p>Thanks for visiting.</p>
-        <p>Copyright &copy; Cynthia Wong.</p>
+        <p>Thanks for your visit.</p>
+        <p>Feel free to <a href="mailto:cynthiaswong88@gmail.com">contact me</a>.</p>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
