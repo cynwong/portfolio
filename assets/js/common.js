@@ -126,8 +126,12 @@ const render_details = function(index){
 
 
     $modal.find(".btn-site").attr("href", deployedURL);
-    $modal.find(".btn-github").attr("href",githubURL);
-
-
+    const $btnGithub = $modal.find(".btn-github");
+    $btnGithub.removeClass("btn-show");
+    if(githubURL !== ""){
+        $btnGithub.attr("href",githubURL);
+        $btnGithub.addClass("btn-show");
+    }
+    
     $modal.show();
 }

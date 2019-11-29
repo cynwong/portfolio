@@ -91,7 +91,7 @@ const PORTFOLIO_DATA = [
                 alt: "Weather Dashboard screenshot image"
             }
         ],
-        githubURL: "https://github.com/cynwong/Weather_Dashboard",
+        githubURL: "", // private - so cannot view. 
         deployedURL: "https://cynwong.github.io/Weather_Dashboard/",
         summary: "Weather forecast application",
         description: 'Weather Dashboard is an one-page application where the user can search for weather by city name e.g. "Clayton", "Melbourne". \nWeather Dashboard display current weather information and next five days forecasts.',
