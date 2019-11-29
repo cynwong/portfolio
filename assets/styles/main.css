@@ -172,7 +172,7 @@ section .section-content{
     border-radius: var(--border-radius-default);
     box-shadow: 0 4px 8px 0 var(--color-gray-3), 0 2px 16px 0 var(--color-gray-5);
     /* padding: 3px;  */
-    cursor:pointer;
+    cursor:default;
     position: relative;
 }
 
