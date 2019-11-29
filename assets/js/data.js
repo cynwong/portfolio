@@ -63,8 +63,8 @@ const PORTFOLIO_DATA = [
         ],
         githubURL: "https://github.com/cynwong/project-ACK",
         deployedURL: "https://cynwong.github.io/day_planner/",
-        summary: "A group project where I was responsible for rendition of the API's repsonse data into the application data.",
-        description: "Searchy is a single-page web application which allows users to search the desired events and keeps track of them. In this project, as a member of development team, I was responsible for redition of the data for the application and assisted the teammates in both page design, development, and project manageent.",
+        summary: "A group project where I was responsible for rendition of the API's response data into the application data.",
+        description: "Searchy is a single-page web application which allows users to search the desired events and keeps track of them. In this project, as a member of development team, I was responsible for rendition of the data for the application and assisted the teammates in both page design, development, and project management.",
         mainTags: [api, bulma, html5, js],
         otherTags: [html, css, css3, jquery, moment, ticketmaster,agile]
     },
@@ -109,7 +109,7 @@ const PORTFOLIO_DATA = [
         githubURL: "https://github.com/cynwong/MBC",
         deployedURL: "https://cynwong.github.io/MBC/",
         summary: "A repository of mini projects ",
-        description: 'MBC is a collection of small projects developed by me.',
+        description: 'MBC is a collection of mini-projects developed by me.',
         mainTags: [html5, bootstrap, js],
         otherTags: [html,css,css3,fa, jquery, moment]
     }
