@@ -158,11 +158,13 @@ section .section-content{
 #portfolio-section #projects-container{
     display:flex;
     flex-flow: row wrap;
-    justify-content: space-evenly;
-    
+    /* justify-content: space-evenly; */
+    margin: -15px;
+    padding: 30px;    
 }
 
 #projects-container .card{
+    margin: 15px;
     flex-basis: 400px;
     height: 250px;
     overflow:hidden;
@@ -412,6 +414,7 @@ section .section-content{
 }
 
 .modal-footer .btn{
+    display:inline-block;
     position: relative;
     font-size: 1.2rem;
     margin: 15px 8px;
@@ -419,6 +422,14 @@ section .section-content{
     border-radius: 200px;
     background: var(--color-primary-5);
     color: var(--color-primary-1);
+}
+
+.modal-footer .btn.btn-github{
+    display:none;
+}
+
+.modal-footer .btn-github.btn-show {
+    display: inline-block;
 }
 
 /* ref: https://www.w3schools.com/css/css_tooltip.asp */
