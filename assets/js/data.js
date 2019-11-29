@@ -62,7 +62,7 @@ const PORTFOLIO_DATA = [
             }
         ],
         githubURL: "https://github.com/cynwong/project-ACK",
-        deployedURL: "https://cynwong.github.io/day_planner/",
+        deployedURL: "https://cynwong.github.io/project-ACK/",
         summary: "A group project where I was responsible for rendition of the API's response data into the application data.",
         description: "Searchy is a single-page web application which allows users to search the desired events and keeps track of them. In this project, as a member of development team, I was responsible for rendition of the data for the application and assisted the teammates in both page design, development, and project management.",
         mainTags: [api, bulma, html5, js],
