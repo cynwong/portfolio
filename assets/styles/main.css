@@ -7,11 +7,13 @@
 /* Defaults */
 html, body{
     --color-secondary: 20deg, 100%;
+    --color-secondary-0:hsl(var(--color-secondary),97%);
     --color-secondary-1:hsl(var(--color-secondary),90%);
     --color-secondary-2: hsl(var(--color-secondary),83%);
     --color-secondary-3: hsl(var(--color-secondary),78%);
     --color-secondary-4: hsl(var(--color-secondary),57%);
-    --color-secondary-5: hsl(var(--color-secondary),25%); /* #6D2400 */
+    --color-secondary-5: hsl(var(--color-secondary),25%); 
+    --color-secondary-6: hsl(var(--color-secondary),7%); 
 
     --color-primary: 157deg, 17%;
     --color-primary-1:hsl(var(--color-primary),93%);
@@ -69,8 +71,9 @@ header .site-title{
     margin-left: 10px;
 }
 header .site-title h1{
-    /* margin: 0.5rem 1.5rem 0.8rem; */
-    font-size: 2.5rem;
+    margin: 1rem 1.5rem 0.8rem;
+    font-size: 3rem;
+    font-weight:900;
     font-family: 'Cedarville Cursive', cursive;
     text-shadow: 0px 0px 4px var(--color-secondary-4);
 }
@@ -208,124 +211,42 @@ section .section-content{
 
 .card .card-title{
     margin-top: 13px;
-    font-size: 1.1rem;
+    font-family: 'Spicy Rice','Knewave','Mrs Sheppards', cursive;
+    font-size: 1.3rem;
     font-weight: 600;
-    color: var(--color-primary-1);
-    text-shadow: 0 0 2px var(--color-secondary-4);
+    color: var(--color-secondary-1);
+    text-shadow: 
+        /* 3px 3px 0 var(--color-secondary-6), */
+        -2px -2px 0 var(--color-primary-5),
+        2px -2px 0 var(--color-primary-5),
+        -2px 2px 0 var(--color-primary-5),
+        2px 2px 0 var(--color-primary-5);
     margin-bottom: 0.7rem;
 
 }
 
 .card .card-tags{
     line-height: 0.7rem;
-    /* font-size: 0.6rem; */
     display:block;
     list-style-type: none;
     width: 100%;
 }
 
-/* Ref: https://varya.me/en/posts/pseudo-tag-cloud-css/ */
 .card-tags li{
     list-style: none;
     display: inline-block;
     margin: 2px;
     border-radius: 10px;
     padding: 5px 8px;
-    background-color: var(--color-secondary-1);
+    background-color: var(--color-secondary-0);
     font-size: 0.6rem;
     color: var(--color-primary-5);
 }
-/* 
-.card-tags li.tag1{
-    font-size: 0.5rem;
-    color:var(--color-primary-5);
-}
-
-.card-tags li.tag2{
-    font-size: 0.6rem;
-    color:var(--color-primary-4);
-}
-
-.card-tags li.tag3{
-    font-size: 0.7rem;
-    color:var(--color-gray-6);
-}
-.card-tags li.tag4{
-    font-size: 0.8rem;
-    color:var(--color-secondary-4);
-}
-
-.card-tags li.tag5{
-    font-size: 0.9rem;
-    color:var(--color-secondary-5);
-}
-.card-tags li.tag6{
-    font-size: 0.5rem;
-    color:var(--color-gray-9);
-}
-
-.card-tags li.tag7{
-    font-size: 0.6rem;
-    color:var(--color-gray-8);
-}
-
-.card-tags li.tag8{
-    font-size: 0.7rem;
-    color:var(--color-gray-7);
-}
-
-.card-tags li.tag9{
-    font-size: 0.8rem;
-    color:var(--color-primary-5);
-}
-
-.card-tags li.tag10{
-    font-size: 0.9rem;
-    color:var(--color-primary-4);
-}
-
-.card-tags li.tag11{
-    font-size: 0.5rem;
-    color:var(--color-gray-6);
-}
-
-.card-tags li.tag12{
-    font-size: 0.6rem;
-    color:var(--color-secondary-4);
-}
-
-.card-tags li.tag13{
-    font-size: 0.7rem;
-    color:var(--color-secondary-5);
-    background-color: var(--color-gray-1);
-}
-
-.card-tags li.tag14{
-    font-size: 0.8rem;
-    color:var(--color-gray-9);
-}
-
-.card-tags li.tag15{
-    font-size: 0.9rem;
-    color:var(--color-gray-8);
-}
-
-.card-tags li.tag16{
-    font-size: 0.5rem;
-    color:var(--color-gray-7);
-}
-
-.card-tags li.tag17{
-    font-size: 0.6rem;
-    color:var(--color-pirmary-5);
-} */
-
-
 
 .card .card-body{
     line-height: normal;
     margin-top: 20px;
-    color: var(--color-secondary-1);
+    color: var(--color-secondary-0);
 }
 
 .card .btn-more {
@@ -395,11 +316,175 @@ section .section-content{
 .template, .hidden{
     display:none;
 }
+/* ref: https://www.w3schools.com/howto/howto_css_modals.asp */
+.modal{
+    display:none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: var(--color-gray-9);
+    background: hsla(0deg, 0%, 2%, 0.7);
+
+    clear: both;
+}
+
+.btn-close.modal-btn{
+    color: var(--color-gray-1);
+    background-color: var(--color-gray-6);
+    border-radius: 50px;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 11px;
+    font-size:2rem;
+    float: right;
+}
+
+.btn-close.modal-btn:hover, .btn-close.modal-btn:active{
+    color: var(--color-gray-9);
+    text-decoration: none;
+    cursor:pointer;
+}
+.modal-content{
+    background-color: var(--color-primary-1);
+    margin:5% auto;
+    border: 1px solid var(--color-gray-7);
+    width: 80%;
+    box-sizing: border-box;
+
+}
+
+.modal-header {
+    background: var(--color-primary-4);
+    width: 100%;
+    height: 65px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.modal-title {
+    font-family: 'Spicy Rice','Knewave','Mrs Sheppards', cursive;
+    font-size: 2.3rem;
+    color: var(--color-secondary-1);
+    text-shadow: 2px 2px 8px var(--color-gray-9);
+    margin-top: 15px;
+}
+
+
+.modal-image img{
+    width: 100%;
+    height: auto;
+    border-top: 4px solid var(--color-secondary-4);
+    border-bottom: 4px solid var(--color-secondary-4);
+}
+
+.modal-description{
+    color: var(--color-primary-5);
+    font-size: 1.1rem;
+    margin: 0.8rem;
+    line-height: 1.5rem;
+}
+
+.modal-tag-cloud{
+    line-height:normal;
+    display:block;
+    list-style-type: none;
+    width:100%;
+    margin-left: 15px;
+    margin-right:15px;
+
+}
+
+.modal-tag-cloud li{
+    list-style: none;
+    display: inline-block;
+    margin: 2px;
+    border-radius: 10px;
+    padding: 5px 8px;
+    color: var(--color-primary-5);
+    font-size: 0.8rem;
+    background-color: var(--color-secondary-2);
+    cursor:default;
+}
+
+.modal-footer{
+    text-align: center;
+    min-height: 75px;
+    margin-top:45px;
+}
+
+.modal-footer .btn{
+    position: relative;
+    font-size: 1.2rem;
+    margin: 15px 8px;
+    padding: 17px;
+    border-radius: 200px;
+    background: var(--color-primary-5);
+    color: var(--color-primary-1);
+}
+
+/* ref: https://www.w3schools.com/css/css_tooltip.asp */
+.modal-footer .btn .tooltip{
+    visibility: hidden;
+    width: 120px;
+    background-color:var(--color-primary-4);
+    color: var(--color-primary-1);
+    text-align:center;
+    border-radius:5px;
+    padding: 5px 0;
+
+    position: absolute;
+    z-index:1;
+
+    font-size:0.8rem;
+    text-shadow: none;
+    
+}
+
+.modal-footer .btn .tooltip.right{
+    top: 15px;
+    right: 120%;
+}
+
+.modal-footer .btn .tooltip.left{
+    top: 15px;
+    left: 120%;
+}
+
+.modal-footer .btn:hover .tooltip{
+    visibility: visible;
+}
+
+
+.modal-footer .btn .tooltip.left::after{
+    content: " ";
+    position: absolute;
+    top: 50%;
+    right: 100%; /* To the left of the tooltip */
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent var(--color-primary-4) transparent transparent;
+}
+
+.modal-footer .btn .tooltip.right::after{
+    content: " ";
+    position: absolute;
+    top: 50%;
+    left: 100%; /* To the right of the tooltip */
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent var(--color-primary-4);
+}
 
 /* Footer section */
 
 footer{
-    color: var(--color-secondary-2);
+    color: var(--color-secondary-1);
     background-color: var(--color-primary-4);
     border-top: 3px solid var(--color-secondary-3);
     min-height: 35px;
@@ -411,7 +496,7 @@ footer{
 
 footer a{
     text-decoration: none;
-    color: var(--color-secondary-4);
+    color: var(--color-secondary-3);
 }
 
 
