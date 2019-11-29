@@ -29,14 +29,13 @@ const generatePortfolio = function () {
 
     //prepare the card for user display
     for (let project of PORTFOLIO_DATA) {
-        console.log(project)
         const {
             name,
             imgAlt,
             imgURL,
             deployedURL: url,
             description,
-            tags: tagNames
+            mainTags: tagNames
         } = project;
         const tags = [];
         const $card = $section.find(".card.template").clone().removeClass("template");
@@ -46,14 +45,10 @@ const generatePortfolio = function () {
         $img.attr("alt", imgAlt);
 
         $card.find(".card-title").text(name);
-        console.log(name)
-        
+        tagNames.sort();
         for (let tagName of tagNames) {
-            let classes = "tag tag-icon ";
-            
             tags.push(
-                $("<span>", {
-                    class: classes,
+                $("<li>", {
                     text: tagName,
                     "data-tag-name": tagName
                 })
@@ -61,7 +56,6 @@ const generatePortfolio = function () {
         }
         $card.find(".card-tags").append(tags);
         $card.find(".card-body").text(description);
-        $card.find("btn-link").attr("href",url);
 
         projects.push($card);
     }
