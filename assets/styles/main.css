@@ -163,15 +163,13 @@ section .section-content{
 }
 
 #projects-container .card{
-    flex-basis: 300px;
-    height: 200px;
-    overflow-wrap: break-word;
-    word-break:keep-all;
-    overflow:scroll;
+    flex-basis: 400px;
+    height: 250px;
+    overflow:hidden;
     margin-top:25px;
     margin-left: 15px;
     margin-right: 15px;
-    font-size: 0.75rem;
+    font-size: 0.9rem;
     border-radius: var(--border-radius-default);
     box-shadow: 0 4px 8px 0 var(--color-gray-3), 0 2px 16px 0 var(--color-gray-5);
     /* padding: 3px;  */
@@ -210,18 +208,12 @@ section .section-content{
 
 
 .card .card-title{
-    margin-top: 13px;
+    margin-top: 35px;
+    margin-bottom: 20px;
     font-family: 'Spicy Rice','Knewave','Mrs Sheppards', cursive;
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: var(--color-secondary-1);
-    text-shadow: 
-        /* 3px 3px 0 var(--color-secondary-6), */
-        -2px -2px 0 var(--color-primary-5),
-        2px -2px 0 var(--color-primary-5),
-        -2px 2px 0 var(--color-primary-5),
-        2px 2px 0 var(--color-primary-5);
-    margin-bottom: 0.7rem;
+    color: var(--color-primary-1);
+    font-size: 1.8rem;
+    text-shadow: 0 0 4px var(--color-gray-8);
 
 }
 
@@ -246,6 +238,8 @@ section .section-content{
 .card .card-body{
     line-height: normal;
     margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
     color: var(--color-secondary-0);
 }
 
