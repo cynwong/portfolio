@@ -290,6 +290,7 @@ section .section-content{
     margin-right: auto;
     display: block;
     text-decoration: none;
+    min-width:200px;
     width: 40%;
     height: 55px;
     background-color: var(--color-secondary-4);
@@ -300,7 +301,7 @@ section .section-content{
     font-weight: 900;
     font-size: 1.3rem;
     text-shadow: 0 0 4px var(--color-gray-1);
-    border-radius: 15px;
+    border-radius: 50px;
     transition: background 1s;
 }
 
@@ -491,7 +492,7 @@ footer{
     padding: 5px;
     flex: none;
     text-align: center;
-    font-size:0.6rem;
+    font-size:0.7rem;
 }
 
 footer a{
