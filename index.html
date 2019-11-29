@@ -36,16 +36,16 @@
         <!-- <button id="btn-mini-nav">&#9776;</button> -->
         <nav class="page-navs">
             <button id="btn-about" class="btn-nav current">
-                    <i class="fa fa-id-badge"></i> 
-                    About
+                <i class="fa fa-id-badge"></i>
+                About
             </button>
-            <button id= "btn-portfolio" class="btn-nav">
-                    <i class="fa fa-images"></i> 
-                    Portfolio
+            <button id="btn-portfolio" class="btn-nav">
+                <i class="fa fa-images"></i>
+                Portfolio
             </button>
-            <button id= "btn-contact" class="btn-nav">
-                    <i class="fa fa-address-card"></i> 
-                    Contact
+            <button id="btn-contact" class="btn-nav">
+                <i class="fa fa-address-card"></i>
+                Contact
             </button>
         </nav>
     </header>
@@ -56,15 +56,21 @@
                 <p>Hi. I am Cynthia.</p>
                 <p>I am a Full-stack Web Developer based in Melbourne, Australia.</p>
                 <p>I love challenges and problem solving. &nbsp;I believe in continuous learning.</p>
-                <p>Along many twists and turns of my career path, I picked up numerous soft skills such as research skills, teamwork, coaching, management, quick adaptability to new environment, working closely with others, multitasking among other things. &nbsp;Although I enjoyed working in other fields, my passion has always been for the Technology.</p>
-                <p>Since I returned back to the IT field, I fell in love with the coding all over again. &nbsp;As a web developer, I love utilizing my love for challenges and my hatred to lose, my attention to details, and my goal-oriented work-ethic to develop innovative and seamless applications. &nbsp;My diverse arsenal of both technical and soft-skills make me a strong addition to any development team. 
+                <p>Along many twists and turns of my career path, I picked up numerous soft skills such as research
+                    skills, teamwork, coaching, management, quick adaptability to new environment, working closely with
+                    others, multitasking among other things. &nbsp;Although I enjoyed working in other fields, my
+                    passion has always been for the Technology.</p>
+                <p>Since I returned back to the IT field, I fell in love with the coding all over again. &nbsp;As a web
+                    developer, I love utilizing my love for challenges and my hatred to lose, my attention to details,
+                    and my goal-oriented work-ethic to develop innovative and seamless applications. &nbsp;My diverse
+                    arsenal of both technical and soft-skills make me a strong addition to any development team.
                 </p>
             </div>
         </section>
         <section id="portfolio-section" class="is-flex hidden">
             <div class="card template">
                 <picture class="card-image">
-                        <img src="https://via.placeholder.com/350" alt="Placeholder image">
+                    <img src="https://via.placeholder.com/350" alt="Placeholder image">
                 </picture>
                 <div class="card-content ">
                     <h5 class="card-title"></h5>
@@ -74,16 +80,39 @@
                 </div>
             </div>
             <div id="projects-container"></div>
-            <div id="project-detail">
-                <h2 id="project-title"></h2>
+            <div id="project-details" class="modal">
+                <span class="btn-close modal-btn">&times;</span>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title"></h2>
+                    </div>
+                    <div class="modal-body">
+                        <picture class="modal-image template">
+                            <img src="https://via.placeholder.com/350" alt="Placeholder image">
+                        </picture>
+                        <div class="modal-image-container">
+                            
+                        </div>
+                        
+                        <p class="modal-description"></p>
+                        <ul class="modal-tag-cloud"></ul>
+
+                    </div>
+                    <div class="modal-footer">
+                        <a class="btn btn-site" target="_blank"><i class="fas fa-external-link-alt"><span class="tooltip right">Visit site</span></i></a>
+                        <a class="btn btn-github" target="_blank"><i class="fab fa-github"></i><span class="tooltip left">View code</span></a>
+                    </div>
+                </div>
 
             </div>
         </section>
 
         <section id="contact-section" class="hidden">
             <div class="section-content">
-                <div class="contact email"><i class="fas fa-envelope icon"></i> : <a href="mailto:cynthiaswong88@gmail.com">cynthiaswong88@gmail.com</a></div>
-                <div class="contact github"><i class="fab fa-github icon"></i> : <a href="https://github.com/cynwong">github.com/cynwong</a></div>
+                <div class="contact email"><i class="fas fa-envelope icon"></i> : <a
+                        href="mailto:cynthiaswong88@gmail.com">cynthiaswong88@gmail.com</a></div>
+                <div class="contact github"><i class="fab fa-github icon"></i> : <a
+                        href="https://github.com/cynwong">github.com/cynwong</a></div>
 
                 <div id="contact-me">
                     <br />
@@ -94,9 +123,6 @@
         </section>
     </main>
 
-    <section id="mini-contact">
-
-    </section>
     <footer>
         <p>Thanks for your visit.</p>
         <p>Feel free to <a href="mailto:cynthiaswong88@gmail.com">contact me</a>.</p>
@@ -106,6 +132,7 @@
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
     <script src="./assets/js/data.js"></script>
+    <script src="./assets/js/common.js"></script>
     <script src="./assets/js/on_load.js"></script>
 
 
