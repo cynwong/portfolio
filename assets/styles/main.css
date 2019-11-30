@@ -135,6 +135,7 @@ main section{
     height: 100%;
     background-color:transparent;
     line-height: 1.3rem;
+    overflow: scroll;
 }
 
 section .section-content{
@@ -163,54 +164,63 @@ section .section-content{
     padding: 30px;    
 }
 
-#projects-container .card{
+/* ref: https://www.w3schools.com/howto/howto_css_flip_card.asp */
+#projects-container .card-container{
     margin: 15px;
     flex-basis: 400px;
     height: 250px;
     overflow:hidden;
-    margin-top:25px;
-    margin-left: 15px;
-    margin-right: 15px;
-    font-size: 0.9rem;
+
+    background-color: transparent;
     border-radius: var(--border-radius-default);
-    box-shadow: 0 4px 8px 0 var(--color-gray-3), 0 2px 16px 0 var(--color-gray-5);
+    
     /* padding: 3px;  */
     cursor:default;
-    position: relative;
+    perspective: 1000px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px 0 var(--color-gray-3), 0 2px 16px 0 var(--color-gray-5); 
+    padding:5px;
 }
 
+.card-container .card{
+    position: relative;
+    width: 100%;
+    height:100%;
+    text-align: center;
+    font-size: 0.9rem;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    transform-origin: center right;
+    box-shadow: 0 4px 8px 0 hsla(0deg, 0%, 2%, 0.2);
+    
+}
+
+.card-container:hover .card{
+    transform: translateX(-100%) rotateY(-180deg);
+}
+
+.card .card-image, .card .card-content{
+    position: absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom: 0;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border-radius: var(--border-radius-default);
+}
 .card .card-image img{
+    border:2px solid var(--color-gray-1);
     display:block;
     width: 100%;
     height: 100%;
-    border-radius: var(--border-radius-default);
+    
 }
-/* .card:hover  .card-image img{
-    opacity: 0.4;
-    transition: 1s ease;
-} */
 
 .card .card-content{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right:0;
-
-    border-radius: var(--border-radius-default);
-    background-color: hsla(var(--color-primary),44%, 95%);
-    /* background-color: hsla(var(--color-primary),44%, 87%); */
-    text-align: center;
-    width: 100%;
-    height: 100%;
-    transform: scale(0);
-    transition: 0.6s ease;
+    background-color: var(--color-primary-4);
+    transform: rotateY(180deg);
 }
-
-.card:hover .card-content{
-    /* height:100%; */
-    transform: scale(1);
-}
-
 
 .card .card-title{
     margin-top: 35px;
@@ -219,7 +229,6 @@ section .section-content{
     color: var(--color-primary-1);
     font-size: 1.8rem;
     text-shadow: 0 0 4px var(--color-gray-8);
-
 }
 
 .card .card-tags{
@@ -272,7 +281,6 @@ section .section-content{
     transition: background 0s;
 }
 
-
 #contact-section .contact{
     margin-bottom: 1.5rem;
     color: var(--color-secondary-5);
@@ -317,6 +325,7 @@ section .section-content{
     display:none;
 }
 /* ref: https://www.w3schools.com/howto/howto_css_modals.asp */
+/* ref: https://3dtransforms.desandro.com/card-flip */
 .modal{
     display:none;
     position: fixed;
@@ -350,17 +359,16 @@ section .section-content{
 }
 .modal-content{
     background-color: var(--color-primary-1);
-    margin:5% auto;
+    margin:3% auto;
     border: 1px solid var(--color-gray-7);
-    width: 80%;
+    width: 70%;
     box-sizing: border-box;
-
 }
 
 .modal-header {
     background: var(--color-primary-4);
     width: 100%;
-    height: 65px;
+    min-height: 65px;
     padding-top: 10px;
     text-align: center;
 }
@@ -371,20 +379,30 @@ section .section-content{
     color: var(--color-secondary-1);
     text-shadow: 2px 2px 8px var(--color-gray-9);
     margin-top: 15px;
+    line-height:normal;
+    margin-bottom:15px;
 }
-
-
+.modal-image-container{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
 .modal-image img{
     width: 100%;
     height: auto;
-    border-top: 4px solid var(--color-secondary-4);
-    border-bottom: 4px solid var(--color-secondary-4);
+    padding: 1px;
+    border: 1px solid var(--color-gray-3);
+    background-color: var(--color-primary-1);
+    border-radius: 20px;
+    /* border-top: 4px solid var(--color-secondary-4);
+    border-bottom: 4px solid var(--color-secondary-4); */
 }
 
 .modal-description{
     color: var(--color-primary-5);
     font-size: 1.1rem;
-    margin: 0.8rem;
+    margin: 0.8rem 1rem;
     line-height: 1.5rem;
 }
 
@@ -393,9 +411,8 @@ section .section-content{
     display:block;
     list-style-type: none;
     width:100%;
-    margin-left: 15px;
-    margin-right:15px;
-
+    margin-left: 1rem;
+    margin-right:1rem;
 }
 
 .modal-tag-cloud li{
@@ -413,7 +430,7 @@ section .section-content{
 .modal-footer{
     text-align: center;
     min-height: 75px;
-    margin-top:45px;
+    margin-top:20px;
 }
 
 .modal-footer .btn{

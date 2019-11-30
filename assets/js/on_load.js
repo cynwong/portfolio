@@ -17,7 +17,7 @@ $(document).ready(function () {
 
     $("#projects-container").on("click", ".btn-more", function(event){
         event.preventDefault();
-        const index = $(event.target).closest(".card").data("index");
+        const index = $(event.target).closest(".card-container").data("index");
         render_details(index);
     });
 

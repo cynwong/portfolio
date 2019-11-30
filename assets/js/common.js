@@ -35,7 +35,7 @@ const changePage = function (toPage) {
  */
 const generatePortfolio = function () {
 
-    const $section = $("main #portfolio-section");
+    const $section = $("#portfolio-section");
     const $container = $section.find("#projects-container");
     const projects = [];
 
@@ -52,7 +52,7 @@ const generatePortfolio = function () {
             mainTags: tagNames
         } = project;
         const tags = [];
-        const $card = $section.find(".card.template").clone().removeClass("template");
+        const $card = $section.find(".card-container.template").clone().removeClass("template");
         const $img = $card.find(".card-image img");
         const image = images[0];
 
