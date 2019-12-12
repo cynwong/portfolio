@@ -43,7 +43,6 @@ const generatePortfolio = function () {
     $container.empty();
 
     //prepare the card for user display
-    // Pfor (let (index,project) of PORTFOLIO_DATA) {
     PORTFOLIO_DATA.forEach((project, index)=>{
         const {
             name,
@@ -96,8 +95,10 @@ const render_details = function(index){
     const imgElements = [];
     const tagElements = [];
 
+    // add title
     $modal.find(".modal-title").text(name);
 
+    //append the images. 
     $imageContainer.empty();
     for(let image of images){
         const $container = $modal.find(".modal-image.template").clone().removeClass("template");
@@ -110,8 +111,10 @@ const render_details = function(index){
 
     $imageContainer.append(imgElements);
 
+    //add description
     $modal.find(".modal-description").text(description);
 
+    //generate tag cloud
     tags.sort();
     $tagCloud.empty();
     for(let tag of tags){
@@ -124,8 +127,15 @@ const render_details = function(index){
     }
     $tagCloud.append(tagElements);
 
+    //check if there is a site url. if not, don't show it
+    const $btnSite = $modal.find(".btn-site");
+    $btnSite.removeClass("btn-show");
+    if(deployedURL){
+        $btnSite.attr("href", deployedURL);
+        $btnSite.addClass("btn-show");
+    }
 
-    $modal.find(".btn-site").attr("href", deployedURL);
+    //check if there is a github url. if not, don't show it. 
     const $btnGithub = $modal.find(".btn-github");
     $btnGithub.removeClass("btn-show");
     if(githubURL){

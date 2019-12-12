@@ -444,11 +444,11 @@ section .section-content{
     color: var(--color-primary-1);
 }
 
-.modal-footer .btn.btn-github{
+.modal-footer .btn{
     display:none;
 }
 
-.modal-footer .btn-github.btn-show {
+.modal-footer .btn.btn-show {
     display: inline-block;
 }
 
