@@ -25,12 +25,14 @@ const TAG_NAMES = {
     bulma : "Bulma CSS Framework",
     css : "CSS",
     css3 : "CSS3",
+    ejs: "EJS(Embedded JavaScript templating)",
     fa: "Font-Awesome CSS",
     html: "HTML",
     html5: "HTML5",
     js: "JavaScript",
     jquery: "jQuery",
     moment: "moment.js",
+    node: "node.js",
     openweather: "Open Weather API",
     ticketmaster: "Ticketmaster API"
 };
@@ -42,12 +44,14 @@ const {
     bulma,
     css,
     css3,
+    ejs,
     fa,
     html,
     html5,
     js,
     jquery,
     moment,
+    node,
     openweather,
     ticketmaster
 } = TAG_NAMES;
@@ -98,19 +102,19 @@ const PORTFOLIO_DATA = [
         mainTags: [html5, bootstrap, js, api],
         otherTags: [html,css,css3,fa, jquery, moment, openweather]
     },
-    // {
-    //     name: "MBC",
-    //     images: [
-    //         {
-    //             url: "./assets/images/mbc.png",
-    //             alt: "MBC screenshot image"
-    //         }
-    //     ],
-    //     githubURL: "https://github.com/cynwong/MBC",
-    //     deployedURL: "https://cynwong.github.io/MBC/",
-    //     summary: "A repository of mini projects ",
-    //     description: 'MBC is a collection of mini-projects developed by me.',
-    //     mainTags: [html5, bootstrap, js],
-    //     otherTags: [html,css,css3,fa, jquery, moment]
-    // }
+    {
+        name: "Team Profile Generator",
+        images: [
+            {
+                url: "./assets/images/team_summary.gif",
+                alt: "Team Profile Generator screenshot image"
+            }
+        ],
+        githubURL: "https://github.com/cynwong/Team-Summary",
+        deployedURL: "",
+        summary: "A command-line application to generate team summary",
+        description: "Team profile generator is a command line application which generates a HTML page with the development team's information summary.",
+        mainTags: [js, node],
+        otherTags: [ejs]
+    }
 ];
