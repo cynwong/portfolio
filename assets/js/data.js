@@ -95,7 +95,7 @@ const PORTFOLIO_DATA = [
                 alt: "Weather Dashboard screenshot image"
             }
         ],
-        githubURL: undefined, // private - so cannot view. 
+        githubURL: "https://github.com/cynwong/weather-dashboard-m", // private - so cannot view. 
         deployedURL: "https://cynwong.github.io/Weather_Dashboard/",
         summary: "Weather forecast application",
         description: 'Weather Dashboard is an one-page application where the user can search for weather by city name e.g. "Clayton", "Melbourne". \nWeather Dashboard display current weather information and next five days forecasts.',
@@ -111,7 +111,7 @@ const PORTFOLIO_DATA = [
             }
         ],
         githubURL: "https://github.com/cynwong/Team-Summary",
-        deployedURL: "",
+        deployedURL: undefined,
         summary: "A command-line application to generate team summary",
         description: "Team profile generator is a command line application which generates a HTML page with the development team's information summary.",
         mainTags: [js, node],
