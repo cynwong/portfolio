@@ -25,7 +25,7 @@ const TAG_NAMES = {
     bulma : "Bulma CSS Framework",
     css : "CSS",
     css3 : "CSS3",
-    ejs: "EJS(Embedded JavaScript templating)",
+    ejs: "EJS (Embedded JavaScript templating)",
     fa: "Font-Awesome CSS",
     html: "HTML",
     html5: "HTML5",
