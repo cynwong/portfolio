@@ -1,6 +1,8 @@
-"use strict";
+'use strict';
 
 $(document).ready(function () {
+
+	changePage('home');
 
 	// toggle menu button
 	$(".btn-menu").click((event) => {
@@ -19,17 +21,24 @@ $(document).ready(function () {
 	});
 
     // Navigation buttons onClick action
-    // $(".page-navs button.btn-nav").click((event) => {
-    //     const $target = $(event.target);
-    //     const className = "current";
-    //     if (!$target.hasClass(className)) {
-    //         //if button does not have current class, 
-    //         // change page. 
-    //         $(".btn-nav.current").removeClass(className);
-    //         $target.addClass(className);
-    //         changePage($target.attr("id").split("-")[1]);
-    //     }
-    // });
+    $(".menu .menu-item").click((event) => {
+		event.preventDefault();
+		const $link = $(event.target);
+		const $item = $link.closest(".menu-item");
+
+		const href = $link.data("href");
+
+		changePage(href, $item);
+
+        // const className = "current";
+        // if (!$target.hasClass(className)) {
+        //     //if button does not have current class, 
+        //     // change page. 
+        //     $(".btn-nav.current").removeClass(className);
+        //     $target.addClass(className);
+        //     changePage($target.attr("id").split("-")[1]);
+        // }
+    });
 
     // $("#projects-container").on("click", ".btn-more", function(event){
     //     event.preventDefault();

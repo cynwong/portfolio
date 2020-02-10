@@ -15,19 +15,32 @@ const hideAllSections = function () {
 /**
  * switch to chosen page. 
  * @param {string} toPage 
+ * @param {jQuery element} $item
  */
-const changePage = function (toPage) {
+const changePage = function (toPage, $item) {
     // First, hide all sections
-    hideAllSections();
+	hideAllSections();
 
+	// remove active class from menu item 
+	$(".menu-item.active").removeClass("active");
+
+	if(!$item) {
+		$item = $(".menu-item:first-child");
+	}
+	
     // portfolio page is special. it must be generated from data. 
     if (toPage.localeCompare("portfolio") === 0) {
         generatePortfolio();
     }
 
+	// add active to menu item
+	$item.addClass("active");
     // display chosen section
-    $("#" + toPage + "-section").show();
+	$("#" + toPage).show();
 
+	// hide menu
+	$(".menu").removeClass("open");
+	$(".btn-menu-burger").removeClass("open");
 };
 
 /**
