@@ -2,7 +2,8 @@
 
 $(document).ready(function () {
 
-	changePage('home');
+	// changePage('home');
+	changePage('portfolio');
 
 	// toggle menu button
 	$(".btn-menu").click((event) => {
