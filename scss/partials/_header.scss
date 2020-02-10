@@ -1,0 +1,140 @@
+header {
+	.btn-menu{
+		position: absolute;
+		z-index: 1;
+		right: 1rem;
+		top: 1rem;
+		height: 35px;
+		width: 35px;
+		cursor: pointer;
+		background: $pink-colour;
+		border-radius: 5px;
+		
+		&-burger {
+			position: absolute;
+			right: 0.7rem;
+			top: 1.3rem;
+			width: 20px;
+			height: 3px;
+			background: $secondary-colour;
+			@include animate;
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: -7px;
+				width: 20px;
+				height: 3px;
+				background: $secondary-colour;
+				@include animate;
+			}
+
+			&::after {
+				content: '';
+				position: absolute;
+				top: 7px;
+				width: 20px;
+				height: 3px;
+				background: $secondary-colour;
+				@include animate;
+			}
+
+			&.open {
+				transform: rotate(720deg);
+				background: transparent;
+
+				&::before {
+					transform: rotate(45deg) translate(5px, 4px);
+				}
+
+				&::after {
+					transform: rotate(-45deg) translate(6px, -5px);
+				}
+			}
+		}
+
+	}
+	
+	// ref: https://github.com/codeSTACKr/portfolio-sass/blob/master/scss/_menu.scss
+	nav.menu {
+		position: fixed; 
+		top: 0;
+		left: 0;
+		width: 100vw;
+		opacity: 0.9;
+		visibility: hidden;
+
+		&.open {
+			visibility: visible;
+
+			& ul {
+				transform: translateY(0);
+
+				& .menu-item {
+					transform: translateX(0);
+				}
+			}
+		}
+
+		& ul {
+			list-style: none;
+			display: flex;
+			flex-flow: column wrap;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			overflow: hidden;
+			background-color: $primary-colour;
+			padding-right: 1rem;
+			transform: translateY(-100%);
+			@include animate;
+
+			& .menu-item{
+				transform: translateX(100vw);
+				@include animate;
+
+				& > .menu-link {
+					display: inline-block;
+					font-size: 2rem;
+					text-transform: uppercase;
+					padding: 2rem 0;
+					font-weight: 300;
+					cursor: pointer;
+					@include animate;
+
+					&:hover {
+						background-color: $pink-colour;
+						color: $secondary-colour;
+						font-weight: 900;
+						padding: 25px;
+						border-radius: 25px;
+					}
+				}
+
+				&.active {
+					color: $pink-colour;
+					text-shadow: 0px 0px 2px $border-colour;
+					
+					& .menu-link {
+						font-weight: 900;
+						text-decoration: underline;
+
+						&:hover {
+							background: inherit;
+							color: inherit;
+							cursor: default;
+						}
+					}
+
+					
+					
+				}
+			}
+		}
+		@for $i from 1 through 4 {
+			.menu-item:nth-child(#{$i}) {
+				transition-delay: ($i * 0.1s) + 0.15s;
+			}
+		}
+	}
+}
