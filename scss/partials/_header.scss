@@ -1,4 +1,10 @@
 header {
+	position: fixed;
+	top: 0;
+	width: 100vw;
+	background-color: $background-colour;
+	min-height: 60px;
+
 	.btn-menu{
 		position: absolute;
 		z-index: 1;
