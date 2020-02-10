@@ -74,7 +74,7 @@ const changePage = function (toPage, $item) {
  */
 const generatePortfolio = function () {
 
-    const $section = $("#portfolio-section");
+    const $section = $("#portfolio");
     const $container = $section.find("#projects-container");
     const projects = [];
 
@@ -82,37 +82,40 @@ const generatePortfolio = function () {
     $container.empty();
 
     //prepare the card for user display
-    PORTFOLIO_DATA.forEach((project, index)=>{
-        const {
-            name,
-            images,
-            summary,
-            mainTags: tagNames
-        } = project;
-        const tags = [];
-        const $card = $section.find(".card-container.template").clone().removeClass("template");
-        const $img = $card.find(".card-image img");
-        const image = images[0];
+    PORTFOLIO_DATA.forEach(
+		(
+			{
+				name, 
+				images,
+				summary,
+				mainTags: tagNames
+			},
+			index
+		)=>{
+			const tags = [];
+			const $card = $section.find(".card-container.template").clone().removeClass("template");
+			const $img = $card.find(".card-image img");
+			const image = images[0];
 
-        $card.data("index", index);
+			$card.data("index", index);
 
-        $img.attr("src", image.url);
-        $img.attr("alt", image.alt);
+			$img.attr("src", image.url);
+			$img.attr("alt", image.alt);
 
-        $card.find(".card-title").text(name);
-        tagNames.sort();
-        for (let tagName of tagNames) {
-            tags.push(
-                $("<li>", {
-                    text: tagName,
-                    "data-tag-name": tagName
-                })
-            );
-        }
-        $card.find(".card-tags").append(tags);
-        $card.find(".card-body").text(summary);
+			$card.find(".card-title").text(name);
+			tagNames.sort();
+			for (let tagName of tagNames) {
+				tags.push(
+					$("<li>", {
+						text: tagName,
+						"data-tag-name": tagName
+					})
+				);
+			}
+			$card.find(".card-tags").append(tags);
+			$card.find(".card-body").text(summary);
 
-        projects.push($card);
+			projects.push($card);
     });
     $container.append(projects);
 }
