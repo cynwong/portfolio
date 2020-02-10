@@ -1,5 +1,4 @@
 #portfolio {
-
 	width: 94vw;
 	margin: 65px auto 0;
 
@@ -21,13 +20,10 @@
 				border-radius: 10px;
 				margin: 15px auto 25px;
 				background-color: $primary-colour;
-				picture {
+				&-image {
 					margin-left: auto;
 					margin-right: auto;
-
-					img {
-						max-width: 95%;
-					}
+					max-width:100%;
 				}
 			}
 		}
