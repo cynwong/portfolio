@@ -94,7 +94,7 @@ const generatePortfolio = function () {
 		)=>{
 			const tags = [];
 			const $card = $section.find(".card-container.template").clone().removeClass("template");
-			const $img = $card.find(".card-image img");
+			const $img = $card.find(".card-image");
 			const image = images[0];
 
 			$card.data("index", index);
