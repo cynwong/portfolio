@@ -20,6 +20,7 @@ const hideAllSections = function () {
 const changePage = function (toPage, $item) {
     // First, hide all sections
 	hideAllSections();
+	let state, title, url;
 
 	// remove active class from menu item 
 	$(".menu-item.active").removeClass("active");
@@ -32,6 +33,31 @@ const changePage = function (toPage, $item) {
     if (toPage.localeCompare("portfolio") === 0) {
         generatePortfolio();
     }
+
+	// change location state
+	switch(toPage) {
+		case 'about':
+			state = {page: 2};
+			title = 'About me';
+			url = '/about';
+			break;
+		case 'portfolio':
+			state = {page: 3};
+			title = 'Portfolio';
+			url = '/portfolio';
+			break;
+		case 'contact':
+			state = {page: 2};
+			title = 'Contact me';
+			url = '/contact';
+			break;
+		default:  //home page
+			state = {page: 1};
+			title = 'Cynthia Wong';
+			url = '/';
+			break;
+	}
+	history.pushState(state, title, url);
 
 	// add active to menu item
 	$item.addClass("active");
