@@ -98,10 +98,10 @@ const generatePortfolio = function () {
 			$card.data("index", index);
 
 			// add image data
-			renderImageElement($card.find(".card-image"), images);
+			renderImageElement($card.find(".card-front-image"), images);
 
 			// add title data
-			$card.find(".card-title").text(name);
+			$card.find(".card-front-title").text(name);
 			$card.find(".card-content-title").text(name);
 
 			// add tags
