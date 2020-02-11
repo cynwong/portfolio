@@ -2,8 +2,7 @@
 
 $(document).ready(function () {
 
-	// changePage('home');
-	changePage('portfolio');
+	changePage('home');
 
 	// toggle menu button
 	$(".btn-menu").click((event) => {
@@ -31,14 +30,6 @@ $(document).ready(function () {
 
 		changePage(href, $item);
 
-        // const className = "current";
-        // if (!$target.hasClass(className)) {
-        //     //if button does not have current class, 
-        //     // change page. 
-        //     $(".btn-nav.current").removeClass(className);
-        //     $target.addClass(className);
-        //     changePage($target.attr("id").split("-")[1]);
-        // }
     });
 
     // $("#projects-container").on("click", ".btn-more", function(event){
