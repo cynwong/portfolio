@@ -1,4 +1,13 @@
 "use strict";
+// image sizes in pixel
+const imgSizes = {
+	xs: 388,
+	sm: 576,
+	md: 768,
+	lg: 992,
+	xl: 1200
+};
+
 /**
  * close modal
  */
@@ -26,7 +35,7 @@ const changePage = function (toPage, $item) {
 	$(".menu-item.active").removeClass("active");
 
 	if(!$item) {
-		$item = $("menu").find(`.menu-item[data-href='${toPage}']`);
+		$item = $(".menu").find(`.menu-item:first-child`);
 	}
 	
     // portfolio page is special. it must be generated from data. 
@@ -35,29 +44,29 @@ const changePage = function (toPage, $item) {
     }
 
 	// change location state
-	switch(toPage) {
-		case 'about':
-			state = {page: 2};
-			title = 'About me';
-			url = '/about';
-			break;
-		case 'portfolio':
-			state = {page: 3};
-			title = 'Portfolio';
-			url = '/portfolio';
-			break;
-		case 'contact':
-			state = {page: 2};
-			title = 'Contact me';
-			url = '/contact';
-			break;
-		default:  //home page
-			state = {page: 1};
-			title = 'Cynthia Wong';
-			url = '/';
-			break;
-	}
-	history.pushState(state, title, url);
+	// switch(toPage) {
+	// 	case 'about':
+	// 		state = {page: 2};
+	// 		title = 'About me';
+	// 		url = '/about';
+	// 		break;
+	// 	case 'portfolio':
+	// 		state = {page: 3};
+	// 		title = 'Portfolio';
+	// 		url = '/portfolio';
+	// 		break;
+	// 	case 'contact':
+	// 		state = {page: 2};
+	// 		title = 'Contact me';
+	// 		url = '/contact';
+	// 		break;
+	// 	default:  //home page
+	// 		state = {page: 1};
+	// 		title = 'Cynthia Wong';
+	// 		url = '/';
+	// 		break;
+	// }
+	//history.pushState(state, title, url);
 
 	// add active to menu item
 	$item.addClass("active");
@@ -97,11 +106,21 @@ const generatePortfolio = function () {
 			const $img = $card.find(".card-image");
 
 			$card.data("index", index);
-
+			const srcset = [];
+			for (let [key, value] of Object.entries(images.urls)){
+				srcset.push(`${value} ${imgSizes[key]}w`);
+			}
+			const sizes = `(max-width:${imgSizes.sm}) ${imgSizes.xs}px,
+					(max-width:${imgSizes.md}) ${imgSizes.sm}px,
+					(max-width:${imgSizes.lg}) ${imgSizes.md}px,
+					(max-width:${imgSizes.xl}) ${imgSizes.lg}px,
+					${imgSizes.xl}px`;
+			$img.attr('srcset',srcset.join(','));
+			$img.attr('sizes',sizes);
 			$img.attr("src", images.urls.xs);
 			$img.attr("alt", images.alt);
 
-			$card.find(".card-title").text(name);
+			$card.find(".card-content-title").text(name);
 			tagNames.sort();
 			for (let tagName of tagNames) {
 				tags.push(
@@ -111,8 +130,8 @@ const generatePortfolio = function () {
 					})
 				);
 			}
-			$card.find(".card-tags").append(tags);
-			$card.find(".card-body").text(summary);
+			$card.find(".card-content-tags").append(tags);
+			$card.find(".card-content-body").text(summary);
 
 			projects.push($card);
     });
