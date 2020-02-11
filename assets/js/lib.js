@@ -26,7 +26,7 @@ const changePage = function (toPage, $item) {
 	$(".menu-item.active").removeClass("active");
 
 	if(!$item) {
-		$item = $(".menu-item:first-child");
+		$item = $("menu").find(`.menu-item[data-href='${toPage}']`);
 	}
 	
     // portfolio page is special. it must be generated from data. 
