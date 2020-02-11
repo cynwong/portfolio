@@ -4,6 +4,8 @@
 	font-size: 1.2rem;
 	line-height: 1.5rem;
 
+	@include section-background;
+
 	div:not(:last-child) {
 		margin-bottom: 10px;
 	}
@@ -24,7 +26,6 @@
 			color: $pink-colour;
 		}
 
-
 		& .colon {
 			grid-area: colon;
 		}
@@ -42,5 +43,4 @@
 			
 		}
 	}
-
 }
