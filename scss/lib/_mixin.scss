@@ -2,6 +2,19 @@
 	transition: all 0.5s ease-in-out;
 }
 
+@mixin set-background-image($file-path:'../bg_images/main/extraSmall.jpeg'){
+	background: 
+		linear-gradient(
+			to right, 
+			rgba($overlay-colour, 0.7)
+			rgba($overlay-colour, 0.2)
+		),
+		url($file-path) 10% 5px;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+
 @mixin btn {
 	display: block;
 	width: 10rem; 
