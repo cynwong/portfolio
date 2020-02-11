@@ -23,7 +23,7 @@
 	}
 
 	& .modal-body {
-		width: 100%;
+		@include full-width;
 
 		&-image {
 			width:100%;
