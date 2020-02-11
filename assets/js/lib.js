@@ -95,12 +95,11 @@ const generatePortfolio = function () {
 			const tags = [];
 			const $card = $section.find(".card-container.template").clone().removeClass("template");
 			const $img = $card.find(".card-image");
-			const image = images[0];
 
 			$card.data("index", index);
 
-			$img.attr("src", image.url);
-			$img.attr("alt", image.alt);
+			$img.attr("src", images.urls.xs);
+			$img.attr("alt", images.alt);
 
 			$card.find(".card-title").text(name);
 			tagNames.sort();
