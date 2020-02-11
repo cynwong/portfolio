@@ -2,7 +2,9 @@
 @import 'lib/reset';
 
 // import partials
-@import "lib/colours", "lib/font", "lib/mixin", "lib/screenSizes";
+@import "lib/colours", "lib/font";
+@import "lib/mixin", "lib/screenSizes";
+@import 'lib/var';
 
 :root {
 	font-size: 12px;
@@ -31,13 +33,21 @@ main {
 	background-size: cover;
 	background-repeat: no-repeat;
 	flex-grow: 999;
+
+	& section {
+		width: 94vw;
+		margin: 6rem auto;
+	}
 }
 
 
 @import 'partials/home';
 @import 'partials/aboutMe';
 @import 'partials/portfolio';
-
-
+@import 'partials/contact';
 
 @import 'partials/footer';
+
+
+
+
