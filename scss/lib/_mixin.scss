@@ -23,3 +23,18 @@
 		@include animate;
 	}
 }
+
+@mixin full-width {
+	width: 100%;
+}
+
+@mixin margin-center {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@mixin section-background {
+	background-color: rgba($background-colour, 0.75);
+	padding: 3rem 1rem;
+}
+
