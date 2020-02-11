@@ -1,19 +1,5 @@
 "use strict";
-// image sizes in pixel
-const imgSizes = {
-	xs: 388,
-	sm: 576,
-	md: 768,
-	lg: 992,
-	xl: 1200
-};
 
-/**
- * close modal
- */
-const closeModal = function(){
-    $("#project-details").hide();
-}
 /**
  * hide all sections of main 
  */
@@ -29,13 +15,12 @@ const hideAllSections = function () {
 const changePage = function (toPage, $item) {
     // First, hide all sections
 	hideAllSections();
-	let state, title, url;
 
 	// remove active class from menu item 
 	$(".menu-item.active").removeClass("active");
 
 	if(!$item) {
-		$item = $(".menu").find(`.menu-item:first-child`);
+		$item = $(".menu").find(`.menu-link[data-href=${toPage}]`).closest('.menu-item');
 	}
 	
     // portfolio page is special. it must be generated from data. 
@@ -53,6 +38,38 @@ const changePage = function (toPage, $item) {
 	$(".menu").removeClass("open");
 	$(".btn-menu-burger").removeClass("open");
 };
+
+/**
+ * Render image object for srcset and sizes attributes of img element
+ * @param {object} images image object
+ * @return {object}
+ */
+const renderImageElement = function ($img, data) {
+	// image sizes in pixel
+	const imgSizes = {
+		xs: 388,
+		sm: 576,
+		md: 768,
+		lg: 992,
+		xl: 1200
+	};
+	const srcset = [];
+	for (let [key, value] of Object.entries(data.urls)){
+		srcset.push(`${value} ${imgSizes[key]}w`);
+	}
+	const sizes = `(max-width:${imgSizes.sm}) ${imgSizes.xs}px,
+			(max-width:${imgSizes.md}) ${imgSizes.sm}px,
+			(max-width:${imgSizes.lg}) ${imgSizes.md}px,
+			(max-width:${imgSizes.xl}) ${imgSizes.lg}px,
+			${imgSizes.xl}px`;
+
+	$img.attr('srcset',srcset.join(','));
+	$img.attr('sizes',sizes);
+	$img.attr("src", data.urls.xs);
+	$img.attr("alt", data.alt);
+
+	return $img;
+}
 
 /**
  * Generate Portfolio page by rendering PORTFOLIO_DATA. 
@@ -79,22 +96,9 @@ const generatePortfolio = function () {
 		)=>{
 			const tags = [];
 			const $card = $section.find(".card-container.template").clone().removeClass("template");
-			const $img = $card.find(".card-image");
-
 			$card.data("index", index);
-			const srcset = [];
-			for (let [key, value] of Object.entries(images.urls)){
-				srcset.push(`${value} ${imgSizes[key]}w`);
-			}
-			const sizes = `(max-width:${imgSizes.sm}) ${imgSizes.xs}px,
-					(max-width:${imgSizes.md}) ${imgSizes.sm}px,
-					(max-width:${imgSizes.lg}) ${imgSizes.md}px,
-					(max-width:${imgSizes.xl}) ${imgSizes.lg}px,
-					${imgSizes.xl}px`;
-			$img.attr('srcset',srcset.join(','));
-			$img.attr('sizes',sizes);
-			$img.attr("src", images.urls.xs);
-			$img.attr("alt", images.alt);
+
+			renderImageElement($card.find(".card-image"), images);
 
 			$card.find(".card-content-title").text(name);
 			tagNames.sort();
@@ -126,29 +130,17 @@ const render_details = function(index){
         otherTags
     } = PORTFOLIO_DATA[index];
     const tags = [...mainTags, ...otherTags];
-    const $imageContainer = $modal.find(".modal-image-container");
-    const $tagCloud = $modal.find(".modal-tag-cloud");
-    const imgElements = [];
+    const $tagCloud = $modal.find(".modal-body-tag-cloud");
     const tagElements = [];
 
     // add title
     $modal.find(".modal-title").text(name);
 
-    //append the images. 
-    $imageContainer.empty();
-    for(let image of images){
-        const $container = $modal.find(".modal-image.template").clone().removeClass("template");
-        const $img = $container.find("img");
-        $img.attr("src", image.url);
-        $img.attr("alt", image.alt);
-
-        imgElements.push($container);
-    }
-
-    $imageContainer.append(imgElements);
+	//append the images. 
+	renderImageElement($modal.find(".modal-body-image"), images);
 
     //add description
-    $modal.find(".modal-description").text(description);
+    $modal.find(".modal-body-description").text(description);
 
     //generate tag cloud
     tags.sort();
@@ -178,6 +170,7 @@ const render_details = function(index){
         $btnGithub.attr("href",githubURL);
         $btnGithub.addClass("btn-show");
     }
-    
+	
+	hideAllSections();
     $modal.show();
 }

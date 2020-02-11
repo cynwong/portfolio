@@ -32,22 +32,13 @@ $(document).ready(function () {
 
     });
 
-    // $("#projects-container").on("click", ".btn-more", function(event){
-    //     event.preventDefault();
-    //     const index = $(event.target).closest(".card-container").data("index");
-    //     render_details(index);
-    // });
+    $("#projects-container").on("click", ".btn-more", function(event){
+        event.preventDefault();
+        const index = $(event.target).closest(".card-container").data("index");
+        render_details(index);
+    });
 
-    // $("#project-details  .btn-close").click(function(){
-    //     closeModal();
-    // });
-    // $("#project-details").click(function(event){
-    //     const $target = $(event.target);
-    //     if($target.hasClass("modal")){
-    //         //if click on empty space, 
-    //         //close the modal. 
-    //         closeModal();
-    //     }
-    // });
-
+    $("#project-details .btn-close-modal").click(function(){
+        changePage('portfolio');
+    });
 });
