@@ -70,11 +70,11 @@ const PORTFOLIO_DATA = [
         images: {
 			alt: "Recipe Lover screen image",
 			urls: {
-				xs: "./assets/images/hhop/extraSmall.png",
-				sm: "./assets/images/hhop/small.png",
-				md: "./assets/images/hhop/medium.png",
-				lg: "./assets/images/hhop/large.png",
-				xl: "./assets/images/hhop/extraLarge.png",
+				xs: "./assets/images/hhop/xs.png",
+				sm: "./assets/images/hhop/sm.png",
+				md: "./assets/images/hhop/md.png",
+				lg: "./assets/images/hhop/lg.png",
+				xl: "./assets/images/hhop/xl.png",
 			} 
 		},
         githubURL: "https://github.com/cynwong/hhop",
