@@ -28,7 +28,6 @@ const changePage = function (toPage, $item) {
         generatePortfolio();
     }
 
-
 	// add active to menu item
 	$item.addClass("active");
     // display chosen section
@@ -98,9 +97,14 @@ const generatePortfolio = function () {
 			const $card = $section.find(".card-container.template").clone().removeClass("template");
 			$card.data("index", index);
 
+			// add image data
 			renderImageElement($card.find(".card-image"), images);
 
+			// add title data
+			$card.find(".card-title").text(name);
 			$card.find(".card-content-title").text(name);
+
+			// add tags
 			tagNames.sort();
 			for (let tagName of tagNames) {
 				tags.push(
@@ -118,6 +122,10 @@ const generatePortfolio = function () {
     $container.append(projects);
 }
 
+/**
+ * Render project details
+ * @param {number} index 
+ */
 const render_details = function(index){
     const $modal = $("#project-details");
     const {
