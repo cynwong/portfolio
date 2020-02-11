@@ -1,12 +1,10 @@
 #about {
-	width: 90vw;
-
 	font-size: 1.2rem;
 	line-height: 1.5rem;
 
-	background-color: rgba($background-colour,0.7);
-
-	padding: 3rem 1rem;
+	max-width: 90%;
+	@include margin-center;
+	@include section-background;
 
 	h1 {
 		font-size: 2rem;
@@ -17,5 +15,4 @@
 	p:not(:last-child) {
 		margin-bottom: 1rem;
 	}
-
 }
