@@ -8,17 +8,18 @@
 		grid-template-columns: 1fr;
 		grid-column-gap: 1rem;
 		grid-row-gap: 1rem;
-		width: 100%;		
+		@include full-width;		
 
 		& .card-container {
-			width: 100%;
+			@include full-width;
 			overflow:contain;
 
 			& .card {
 				width: 95%;
 				padding: 5px 10px;
 				border-radius: $rounded-corner;
-				margin: 15px auto;
+				margin: 15px;
+				@include margin-center;
 				background-color: $primary-colour;
 				position: relative;
 				min-width: 210px;
