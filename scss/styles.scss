@@ -37,6 +37,7 @@ main {
 	& section {
 		width: 94vw;
 		margin: 6rem auto;
+		display:none;
 	}
 }
 
@@ -44,6 +45,7 @@ main {
 @import 'partials/home';
 @import 'partials/aboutMe';
 @import 'partials/portfolio';
+@import 'partials/details';
 @import 'partials/contact';
 
 @import 'partials/footer';
