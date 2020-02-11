@@ -1,0 +1,55 @@
+// style reset
+@import 'lib/reset';
+
+// import partials
+@import "lib/colours", "lib/font";
+@import "lib/mixin", "lib/screenSizes";
+@import 'lib/var';
+
+:root {
+	font-size: 12px;
+}
+
+@import  "partials/header";
+
+.wrapper {
+	display: flex;
+	flex-flow: column;
+	width: 100vw;
+	height: 100vh;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	color: $secondary-colour;
+	background-color: $primary-colour;
+}
+
+main {
+	background: 
+		linear-gradient(
+			to right, 
+			rgba($overlay-colour, 0.7)
+			rgba($overlay-colour, 0.2)
+		),
+		url('/assets/bg_images/main/extraSmall.jpeg') 10% 5px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	flex-grow: 999;
+
+	& section {
+		width: 94vw;
+		margin: 6rem auto;
+		display:none;
+	}
+}
+
+
+@import 'partials/home';
+@import 'partials/aboutMe';
+@import 'partials/portfolio';
+@import 'partials/details';
+@import 'partials/contact';
+
+@import 'partials/footer';
+
+
+
+
