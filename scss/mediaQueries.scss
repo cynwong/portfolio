@@ -1,8 +1,13 @@
-@import 'lib/screenSizes';
+@import 'lib/screenSizes', 'lib/colours';
+@import 'lib/mixin';
 
 @media screen and (min-width: $xs) {
 	:root {
 		font-size: 14px;
+	}
+	
+	main {
+		@include set-background-image('../bg_images/main/small.jpeg');
 	}
 
 	#home {
@@ -16,9 +21,14 @@
 	:root {
 		font-size: 16px;
 	}
+	
 	header .btn-menu-burger {
 		right: 0.5rem;
 		top: 1rem;
+	}
+
+	main {
+		@include set-background-image('../bg_images/main/medium.jpeg');
 	}
 
 	#home {
@@ -27,13 +37,18 @@
 }
 
 @media screen and (min-width: $md) {
-	#portfolio #projects-container {
-		grid-template-columns: 1fr 1fr;
+	main {
+		@include set-background-image('../bg_images/main/large.jpeg');
 	}
+	
 	#home {
 		h3 {
 			margin-right: 5rem;
 		}
+	}
+
+	#portfolio #projects-container {
+		grid-template-columns: 1fr 1fr;
 	}
 }
 
@@ -41,9 +56,14 @@
 	:root {
 		font-size: 20px;
 	}
+
 	header .btn-menu-burger {
 		right: 0.4rem;
 		top: 0.8rem;
+	}
+
+	main {
+		@include set-background-image('../bg_images/main/extraLarge.jpeg');
 	}
 
 	#home {
