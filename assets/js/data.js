@@ -139,6 +139,6 @@ const PORTFOLIO_DATA = [
         summary: "Weather forecast application",
         description: 'Weather Dashboard is an one-page application where the user can search for weather by city name e.g. "Clayton", "Melbourne". \nWeather Dashboard display current weather information and next five days forecasts.',
         mainTags: [html5, bootstrap, js, api],
-        otherTags: [html,css,css3,fa, jquery, moment, openweather]
+        otherTags: [html,css,css3,fa, jquery, moment, openWeather]
     },
 ];
