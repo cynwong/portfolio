@@ -23,15 +23,7 @@
 }
 
 main {
-	background: 
-		linear-gradient(
-			to right, 
-			rgba($overlay-colour, 0.7)
-			rgba($overlay-colour, 0.2)
-		),
-		url('/assets/bg_images/main/extraSmall.jpeg') 10% 5px;
-	background-size: cover;
-	background-repeat: no-repeat;
+	@include set-background-image('../bg_images/main/extraSmall.jpeg');
 	flex-grow: 999;
 
 	& section {
