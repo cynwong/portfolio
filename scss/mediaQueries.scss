@@ -1,0 +1,52 @@
+@import 'lib/screenSizes';
+
+@media screen and (min-width: $xs) {
+	:root {
+		font-size: 14px;
+	}
+
+	#home {
+		h2 {
+			margin-left: 8rem;
+		}
+	}
+}
+
+@media screen and (min-width: $sm) {
+	:root {
+		font-size: 16px;
+	}
+	header .btn-menu-burger {
+		right: 0.5rem;
+		top: 1rem;
+	}
+
+	#home {
+		margin-top: 12rem;
+	}
+}
+
+@media screen and (min-width: $md) {
+	#portfolio #projects-container {
+		grid-template-columns: 1fr 1fr;
+	}
+	#home {
+		h3 {
+			margin-right: 5rem;
+		}
+	}
+}
+
+@media screen and (min-width: $lg) {
+	:root {
+		font-size: 20px;
+	}
+	header .btn-menu-burger {
+		right: 0.4rem;
+		top: 0.8rem;
+	}
+
+	#home {
+		margin-top: 12rem;
+	}
+}
