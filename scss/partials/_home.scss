@@ -1,0 +1,33 @@
+#home {
+	margin-top: 20rem;
+	overflow: hidden;
+	text-align: center;
+
+	@include section-background;
+
+	h1 {
+		font-family: 'Cedarville Cursive', cursive;
+		text-shadow: 0px 0px 2px $pink-colour;
+		font-size: 3.5rem;
+		margin: 2.5rem;
+		@include margin-center;
+
+		.first-name {
+			font-size:4rem;
+			color: $pink-colour;
+			text-shadow: 0px 0px 4px $primary-colour;
+		}
+	}
+
+	h2 {
+		text-align: left;
+		margin-left: 2.5rem;
+		font-size: 1.5rem;
+	}
+
+	h3 {
+		font-size: 1.7rem;
+		text-align: right;
+		margin-right: 2rem;
+	}
+}

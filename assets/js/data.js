@@ -13,73 +13,108 @@ const BRAND_FA_CLASSES = {
     npm: "fab fa-npm",
     python: "fab fa-python",
     "stack-overflow": "fab fa-stack-overflow",
-
-
 };
 
 /** Tag Names */
 const TAG_NAMES = {
-    agile: "Agile Methodology",
+	agile: "Agile Methodology",
+	ajax: "AJAX",
     api: "API",
     bootstrap : "Bootstrap CSS Framework",
     bulma : "Bulma CSS Framework",
     css : "CSS",
-    css3 : "CSS3",
-    ejs: "EJS (Embedded JavaScript templating)",
+	css3 : "CSS3",
+	express: "Express.js",
+    ejs: "EJS (Embedded JavaScript templates)",
     fa: "Font-Awesome CSS",
     html: "HTML",
     html5: "HTML5",
     js: "JavaScript",
     jquery: "jQuery",
-    moment: "moment.js",
+	moment: "moment.js",
+	mysql: "MySQL",
     node: "node.js",
-    openweather: "Open Weather API",
-    ticketmaster: "Ticketmaster API"
+	openWeather: "Open Weather API",
+	passport: "Passport.js",
+	scss: "SCSS", 
+    ticketMaster: "Ticketmaster API"
 };
 
 const {
-    agile,
+	agile,
+	ajax,
     api,
     bootstrap,
     bulma,
     css,
     css3,
-    ejs,
+	ejs,
+	express,
     fa,
     html,
     html5,
     js,
     jquery,
-    moment,
+	moment,
+	mysql,
     node,
-    openweather,
-    ticketmaster
+	openWeather,
+	passport,
+	scss,
+    ticketMaster
 } = TAG_NAMES;
 
 const PORTFOLIO_DATA = [
+	{
+        name: "Recipe Lover",
+        images: {
+			alt: "Recipe Lover screen image",
+			urls: {
+				xs: "./assets/images/hhop/xs.png",
+				sm: "./assets/images/hhop/sm.png",
+				md: "./assets/images/hhop/md.png",
+				lg: "./assets/images/hhop/lg.png",
+				xl: "./assets/images/hhop/xl.png",
+			} 
+		},
+        githubURL: "https://github.com/cynwong/hhop",
+        deployedURL: "https://hhop-recipe-blog.herokuapp.com/",
+        summary: "A group project where I was responsible for backend development.",
+        description: "Recipe Lover is  is a blogging application used to store recipes.",
+        mainTags: [js, node, scss, express, mysql],
+        otherTags: [jquery, ajax, passport, agile]
+    },
     {
-        name: "Searchy",
-        images: [
-            {
-                url: "./assets/images/searchy.png",
-                alt: "Searchy screenshot image"
-            }
-        ],
+		name: "Searchy",
+		images: {
+			alt: "Searchy image",
+			urls: {
+				xs: "assets/images/searchy/xs.png",
+				sm: "assets/images/searchy/sm.png",
+				md: "assets/images/searchy/md.png",
+				lg: "assets/images/searchy/lg.png",
+				xl: "assets/images/searchy/xl.png",
+			} 
+		},
         githubURL: "https://github.com/cynwong/project-ACK",
         deployedURL: "https://cynwong.github.io/project-ACK/",
         summary: "A group project where I was responsible for rendition of the API's response data into the application data.",
         description: "Searchy is a single-page web application which allows users to search the desired events and keeps track of them. In this project, as a member of development team, I was responsible for rendition of the data for the application and assisted the teammates in both page design, development, and project management.",
         mainTags: [api, bulma, html5, js],
-        otherTags: [html, css, css3, jquery, moment, ticketmaster,agile]
+        otherTags: [html, css, css3, jquery, moment, ticketMaster,agile]
     },
     {
-        name: "Day Planner",
-        images: [
-            {
-                url: "./assets/images/day_planner.png",
-                alt: "Day Planner screenshot image"
-            }
-        ],
+		name: "Day Planner",
+		images: {
+			alt: "Day Planner image",
+			urls: {
+				xs: "assets/images/day_planner/extraSmall.png",
+				sm: "assets/images/day_planner/small.png",
+				md: "assets/images/day_planner/medium.png",
+				lg: "assets/images/day_planner/large.png",
+				xl: "assets/images/day_planner/extraLarge.png",
+			} 
+		},
         githubURL: "https://github.com/cynwong/day_planner",
         deployedURL: "https://cynwong.github.io/day_planner/",
         summary: "A planner application where users can save their daily tasks.",
@@ -89,32 +124,21 @@ const PORTFOLIO_DATA = [
     },
     {
         name: "Weather Dashboard",
-        images: [
-            {
-                url: "./assets/images/weather_dashboard.png",
-                alt: "Weather Dashboard screenshot image"
-            }
-        ],
-        githubURL: "https://github.com/cynwong/weather-dashboard-m", // private - so cannot view. 
+        images: {
+			alt: "Weather Dashboard image",
+			urls: {
+				xs: "assets/images/weather_dashboard/xs.png",
+				sm: "assets/images/weather_dashboard/sm.png",
+				md: "assets/images/weather_dashboard/md.png",
+				lg: "assets/images/weather_dashboard/lg.png",
+				xl: "assets/images/weather_dashboard/xl.png",
+			} 
+		},
+        githubURL: "https://github.com/cynwong/weather-dashboard-m",
         deployedURL: "https://cynwong.github.io/Weather_Dashboard/",
         summary: "Weather forecast application",
         description: 'Weather Dashboard is an one-page application where the user can search for weather by city name e.g. "Clayton", "Melbourne". \nWeather Dashboard display current weather information and next five days forecasts.',
         mainTags: [html5, bootstrap, js, api],
-        otherTags: [html,css,css3,fa, jquery, moment, openweather]
+        otherTags: [html,css,css3,fa, jquery, moment, openWeather]
     },
-    {
-        name: "Team Profile Generator",
-        images: [
-            {
-                url: "./assets/images/team_summary.gif",
-                alt: "Team Profile Generator screenshot image"
-            }
-        ],
-        githubURL: "https://github.com/cynwong/Team-Summary",
-        deployedURL: undefined,
-        summary: "A command-line application to generate team summary",
-        description: "Team profile generator is a command line application which generates a HTML page with the development team's information summary.",
-        mainTags: [js, node],
-        otherTags: [ejs]
-    }
 ];
