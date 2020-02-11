@@ -1,6 +1,5 @@
 #portfolio {
-	width: 94vw;
-	margin: 65px auto 0;
+
 
 	& .template {
 		display: none;
@@ -9,24 +8,65 @@
 	& #projects-container{
 		display: grid;
 		grid-template-columns: 1fr;
+		grid-column-gap: 1rem;
+		grid-row-gap: 1rem;
 
 		width: 100%;		
 
 		& .card-container {
 			width: 100%;
+			overflow:contain;
+
 			& .card {
-				width: 100%;
-				padding: 5px;
-				border-radius: 10px;
-				margin: 15px auto 25px;
+				width: 95%;
+				padding: 5px 10px;
+				border-radius: $border_radius;
+				margin: 15px auto;
 				background-color: $primary-colour;
+				position: relative;
+				min-width: 210px;
+				max-width: 1200px;
 				&-image {
+					margin-top: 5px;
 					margin-left: auto;
 					margin-right: auto;
 					max-width:100%;
+					border-radius: $border_radius;
+				}
+
+				&-content {
+					background-color: rgba($overlay-colour, 0.85);
+					z-index: 1;
+					margin: 0 auto;
+					padding: 1rem 0.8rem ;
+					position: absolute;
+					bottom:0;
+					right: 0;
+					left: 0;
+					&-title {
+						font-size: 1.5rem;
+						font-weight: 700;
+						color:$pink-colour;
+						margin-bottom: 3px;
+					}
+					&-tags{
+						display: flex;
+						flex-flow: row wrap;
+						justify-content: flex-start;
+						align-items: center;
+						margin-bottom: 3px;
+						& li:not(:first-child):not(:last-child){
+							margin: 0 3px;
+						}
+					}
+					
 				}
 			}
 		}
+	}
+
+	& #project-details {
+		display: none;
 	}
 
 
