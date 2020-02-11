@@ -1,0 +1,61 @@
+#contact {
+	width: 90vw;
+
+	font-size: 1.2rem;
+	line-height: 1.5rem;
+
+	div:not(:last-child) {
+		margin-bottom: 10px;
+	}
+
+	& .contact {
+		display: grid;
+		grid-template-areas: 
+			'icon colon data data data'
+			'icon colon data data data'
+			'icon colon data data data';
+		grid-column-gap:8px;
+		grid-row-gap: 20px;
+		width: fit-content;
+		justify-items: end;
+
+		& .icon {
+			grid-area: icon;
+			font-size: 1.3rem;
+			color: $pink-colour;
+		}
+
+		& .colon {
+			grid-area: colon;
+		}
+
+		& a {
+			grid-area: data;
+		}
+	}
+
+	& #contact-me {
+		margin-top: 25px;
+
+		& .btn-contact {
+			display: block;
+			width: 10rem; 
+			margin-top: 3rem;
+			margin-left: auto;
+			margin-right: auto;
+			color: $secondary-colour;
+			padding: 1.5rem;
+			text-align: center;
+			border-radius: 50px;
+
+
+			&:hover, &:focus {
+				color: $pink-colour;
+				border: 2px solid $pink-colour;
+
+			}
+			
+		}
+	}
+
+}
