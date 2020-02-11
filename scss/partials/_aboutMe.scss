@@ -4,14 +4,18 @@
 	font-size: 1.2rem;
 	line-height: 1.5rem;
 
+	background-color: rgba($background-colour,0.7);
+
+	padding: 3rem 1rem;
+
 	h1 {
 		font-size: 2rem;
 		color: $pink-colour;
-		margin-bottom: 20px;
+		margin-bottom: 2rem;
 	}
 
 	p:not(:last-child) {
-		margin-bottom: 10px;
+		margin-bottom: 1rem;
 	}
 
 }
