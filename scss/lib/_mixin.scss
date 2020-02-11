@@ -14,7 +14,6 @@
 	background-repeat: no-repeat;
 }
 
-
 @mixin btn {
 	display: block;
 	width: 10rem; 
@@ -37,6 +36,11 @@
 	}
 }
 
+@mixin contain {
+	@include full-width;
+	height: 100%;
+}
+
 @mixin full-width {
 	width: 100%;
 }
@@ -46,8 +50,41 @@
 	margin-right: auto;
 }
 
+@mixin place-at-card-bottom ($includeTop:false) {
+	position: absolute;
+	bottom:0;
+	right: 0;
+	left: 0;
+
+	@if $includeTop {
+		top: 0;
+	}
+}
+
+@mixin project-title {
+	font-size: 1.5rem;
+	font-weight: 700;
+	color:$pink-colour;
+	margin-bottom: 1rem;
+}
+
 @mixin section-background {
 	background-color: rgba($background-colour, 0.75);
 	padding: 3rem 1rem;
 }
 
+@mixin tag {
+	li:not(:first-child):not(:last-child){
+		margin: 0 3px;
+	}
+
+	li {
+		font-family: 'Spicy Rice','Knewave','Mrs Sheppards', cursive;
+		background: $tag-background-colour;
+		padding: 5px 10px;
+		border-radius: 15px;
+		color: $pink-colour;
+		font-size: 0.8rem;
+		cursor: default;
+	}
+}
