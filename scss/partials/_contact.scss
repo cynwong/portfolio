@@ -1,5 +1,5 @@
 #contact {
-	width: 90vw;
+	margin-top: 7rem;
 
 	font-size: 1.2rem;
 	line-height: 1.5rem;
@@ -12,10 +12,9 @@
 		display: grid;
 		grid-template-areas: 
 			'icon colon data data data'
-			'icon colon data data data'
 			'icon colon data data data';
 		grid-column-gap:8px;
-		grid-row-gap: 20px;
+		grid-row-gap: 2.5rem;
 		width: fit-content;
 		justify-items: end;
 
@@ -24,6 +23,7 @@
 			font-size: 1.3rem;
 			color: $pink-colour;
 		}
+
 
 		& .colon {
 			grid-area: colon;
@@ -49,10 +49,10 @@
 			border-radius: 50px;
 
 
-			&:hover, &:focus {
+			&:hover, &:focus, &:active {
 				color: $pink-colour;
 				border: 2px solid $pink-colour;
-
+				@include animate;
 			}
 			
 		}
