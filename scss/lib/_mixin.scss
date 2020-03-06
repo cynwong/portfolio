@@ -30,7 +30,7 @@
 	&:hover, &:focus, &:active {
 		color: $pink-colour;
 		border: 4px solid $pink-colour;
-		font-size: 1.3rem;
+		transform: scale(1.05);
 		font-weight: 900;
 		@include animate;
 	}
