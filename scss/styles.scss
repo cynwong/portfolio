@@ -18,12 +18,12 @@
 	width: 100vw;
 	height: 100vh;
 	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-	color: $secondary-colour;
-	background-color: $primary-colour;
+	color: $white-colour;
+	background-color: $dark-gray-colour;
 }
 
 main {
-	@include set-background-image('../bg_images/main/extraSmall.jpeg');
+	@include set-background-image();
 	flex-grow: 999;
 
 	& section {
@@ -41,6 +41,8 @@ main {
 @import 'partials/contact';
 
 @import 'partials/footer';
+
+@import 'mediaQueries';
 
 
 

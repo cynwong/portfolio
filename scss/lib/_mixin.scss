@@ -2,14 +2,14 @@
 	transition: all 0.5s ease-in-out;
 }
 
-@mixin set-background-image($file-path:'../bg_images/main/extraSmall.jpeg'){
+@mixin set-background-image(){
 	background: 
 		linear-gradient(
 			to right, 
-			rgba($overlay-colour, 0.7)
+			rgba($overlay-colour, 0.8)
 			rgba($overlay-colour, 0.2)
 		),
-		url($file-path) 10% 5px;
+		url('../bg_images/main/extraLarge.jpg') 10% 5px;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
@@ -20,17 +20,17 @@
 	margin-top: 3rem;
 	margin-left: auto;
 	margin-right: auto;
-	color: $secondary-colour;
+	color: $white-colour;
 	padding: 1.5rem;
 	text-align: center;
 	border-radius: $pill-corner;
-	border: 1px solid $secondary-colour;
+	border: 1px solid $white-colour;
 
 
 	&:hover, &:focus, &:active {
 		color: $pink-colour;
 		border: 4px solid $pink-colour;
-		font-size: 1.3rem;
+		transform: scale(1.05);
 		font-weight: 900;
 		@include animate;
 	}
@@ -69,7 +69,7 @@
 }
 
 @mixin section-background {
-	background-color: rgba($background-colour, 0.75);
+	background-color: rgba($black-colour, 0.75);
 	padding: 3rem 1rem;
 }
 
@@ -79,7 +79,7 @@
 	}
 
 	li {
-		font-family: 'Spicy Rice','Knewave','Mrs Sheppards', cursive;
+		font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 		background: $tag-background-colour;
 		padding: 5px 10px;
 		border-radius: 15px;

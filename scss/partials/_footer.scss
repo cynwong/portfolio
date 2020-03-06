@@ -1,8 +1,8 @@
 footer {
-	background: $background-colour;
+	background: $black-colour;
 	z-index: 999;
 	font-size: 0.85rem;
-	color: $secondary-colour;
+	color: $white-colour;
 
 	position: fixed;
 	bottom: 0;
@@ -18,17 +18,25 @@ footer {
 		& a {
 			margin: 0 5px;
 			
-			color: $pink-colour;
-			font-size: 2rem;
-			text-decoration: none;
 			border-radius: 5px;
 			text-align: center;
 			text-shadow: 0px 0px 2px $icon-shadow;
+			opacity: 0.65;
 			cursor: pointer;
+			@include animate;
+
+			& i {
+				font-size: 2rem;
+				text-decoration: none;
+				color: $pink-colour;
+			}
 
 			&:hover, &:active, &:focus {
-				font-size:2.5rem;
-				@include animate;
+				& i {
+					transform: scale(1.6);
+					opacity: 1;
+				}
+				
 			}
 		}
 	}
@@ -36,9 +44,10 @@ footer {
 	& .credit {
 		text-align: right;
 		margin-right: 3rem;
+		font-size: 0.5rem;
 
 		& a {
-			color: $secondary-colour;
+			color: $white-colour;
 
 		}
 

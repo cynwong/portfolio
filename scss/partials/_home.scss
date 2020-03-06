@@ -1,33 +1,104 @@
 #home {
-	margin-top: 20rem;
+	margin-top: 20vh;
 	overflow: hidden;
 	text-align: center;
 
 	@include section-background;
 
+	// for typing animation
+	* {
+		overflow: hidden;
+		border-right: .15rem solid $pink-colour;
+		letter-spacing: .15rem;
+		animation-delay: 5s;
+		white-space: nowrap;
+	}
+
+	@keyframes typeH2 {
+		0% {
+			width: 0;
+		}
+		99.9% {
+			border-right: .15rem solid $pink-colour;
+		}
+		100% {
+			border: none;
+		}
+	}
+
+	@keyframes typeH1 {
+		0% {
+			width: 0;
+		}
+		1% {
+			opacity: 1;
+		}
+		99.9% {
+			border-right: .15rem solid $pink-colour;
+		}
+		100% {
+			opacity: 1;
+			border: none;
+		}
+	}
+
+	@keyframes typeH3 {
+		0% {
+			width: 0;
+		}
+		1% {
+			opacity: 1;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+
+	@keyframes blink-caret {
+		50% { border-color: transparent }
+	}
+
 	h1 {
 		font-family: 'Cedarville Cursive', cursive;
 		text-shadow: 0px 0px 2px $pink-colour;
 		font-size: 3.5rem;
-		margin: 2.5rem;
+		margin-left: 2.5rem;
+		width: 24.5rem;
+		min-height: 5rem;
 		@include margin-center;
+		opacity: 0;
+		animation: typeH1 2s steps(20,end), blink-caret 0.01s steps(5,end);
+		animation-delay: 2s;
+		animation-fill-mode: forwards;
 
 		.first-name {
 			font-size:4rem;
 			color: $pink-colour;
-			text-shadow: 0px 0px 4px $primary-colour;
+			text-shadow: 0px 0px 4px $dark-gray-colour;
+			border:none;
 		}
 	}
 
 	h2 {
 		text-align: left;
-		margin-left: 2.5rem;
+		margin: 2.5rem;
+		margin-right: auto;
 		font-size: 1.5rem;
+		width: 9.5rem;
+		animation: typeH2 2s steps(20,end), blink-caret 0.01s steps(5,end);
+		animation-fill-mode: forwards;
 	}
 
 	h3 {
 		font-size: 1.7rem;
-		text-align: right;
-		margin-right: 2rem;
+		text-align: left;
+		margin-left: 45vw;
+		opacity: 0;
+		width: 27rem;
+		animation: 
+			typeH3 3s steps(25, end), 
+			blink-caret .5s step-end infinite alternate;
+		animation-delay: 4s;
+		animation-fill-mode: both;
 	}
 }
