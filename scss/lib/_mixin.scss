@@ -20,11 +20,11 @@
 	margin-top: 3rem;
 	margin-left: auto;
 	margin-right: auto;
-	color: $secondary-colour;
+	color: $white-colour;
 	padding: 1.5rem;
 	text-align: center;
 	border-radius: $pill-corner;
-	border: 1px solid $secondary-colour;
+	border: 1px solid $white-colour;
 
 
 	&:hover, &:focus, &:active {
@@ -69,7 +69,7 @@
 }
 
 @mixin section-background {
-	background-color: rgba($background-colour, 0.75);
+	background-color: rgba($black-colour, 0.75);
 	padding: 3rem 1rem;
 }
 
@@ -79,7 +79,7 @@
 	}
 
 	li {
-		font-family: 'Spicy Rice','Knewave','Mrs Sheppards', cursive;
+		font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 		background: $tag-background-colour;
 		padding: 5px 10px;
 		border-radius: 15px;

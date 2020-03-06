@@ -3,7 +3,7 @@ header {
 	position: fixed;
 	top: 0;
 	width: 100vw;
-	background-color: $background-colour;
+	background-color: $black-colour;
 	min-height: 60px;
 
 	.btn-menu{
@@ -23,7 +23,7 @@ header {
 			top: 1.3rem;
 			width: 20px;
 			height: 3px;
-			background: $secondary-colour;
+			background: $white-colour;
 			@include animate;
 
 			&::before {
@@ -32,7 +32,7 @@ header {
 				top: -7px;
 				width: 20px;
 				height: 3px;
-				background: $secondary-colour;
+				background: $white-colour;
 				@include animate;
 			}
 
@@ -42,7 +42,7 @@ header {
 				top: 7px;
 				width: 20px;
 				height: 3px;
-				background: $secondary-colour;
+				background: $white-colour;
 				@include animate;
 			}
 
@@ -122,14 +122,14 @@ header {
 					text-transform: uppercase;
 					padding: 2rem 0;
 					font-weight: 100;
-					color: $secondary-colour;
-					text-shadow: 0px 0px 2px $background-colour, 2px 2px 6px $background-colour;
+					color: $white-colour;
+					text-shadow: 0px 0px 2px $black-colour, 2px 2px 6px $black-colour;
 					cursor: pointer;
 					@include animate;
 
 					&:hover {
 						background-color: rgba($pink-colour, 0.5);
-						color: $secondary-colour;
+						color: $white-colour;
 						font-weight: 700;
 						padding: 25px;
 						border-radius: 50%;
@@ -139,7 +139,7 @@ header {
 				}
 
 				&.active {
-					color: $secondary-colour;
+					color: $white-colour;
 					text-shadow: 0px 0px 2px $border-colour;
 					
 					& .menu-link {

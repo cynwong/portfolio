@@ -52,7 +52,7 @@
 					}
 	
 					&-title {
-						background-color: rgba($overlay-colour, 0.85);
+						background-color: rgba($overlay-colour, 0.95);
 						padding: 1rem 1.2rem;
 						@include place-at-card-bottom(false);
 						bottom: -1.5rem;
@@ -64,7 +64,7 @@
 				}
 	
 				&-content {
-					background-color: $secondary-colour;
+					background-color: $white-colour;
 					padding: 1rem 1.2rem;
 					transform: rotateY(180deg);
 					width: 95%;
@@ -87,7 +87,7 @@
 						margin-top: 1.4rem;
 						margin-bottom: 1rem;
 						line-height: 1.2rem;
-						color: $background-colour;
+						color: $black-colour;
 					}
 	
 					& .btn-more {
@@ -95,7 +95,7 @@
 						text-align:right;
 						margin: 0.3rem 0.5rem;
 						cursor: pointer;
-						color: $background-colour;
+						color: $black-colour;
 	
 						&:hover, &:focus, &:active {
 							color:$pink-colour;

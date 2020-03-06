@@ -1,8 +1,8 @@
 footer {
-	background: $background-colour;
+	background: $black-colour;
 	z-index: 999;
 	font-size: 0.85rem;
-	color: $secondary-colour;
+	color: $white-colour;
 
 	position: fixed;
 	bottom: 0;
@@ -47,7 +47,7 @@ footer {
 		font-size: 0.5rem;
 
 		& a {
-			color: $secondary-colour;
+			color: $white-colour;
 
 		}
 

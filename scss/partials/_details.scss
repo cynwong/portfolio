@@ -11,13 +11,13 @@
 			color: $pink-colour;
 			text-shadow: 
 						1px 1px 3px $overlay-colour,
-						2px 2px 2px $secondary-colour, 
+						2px 2px 2px $white-colour, 
 						-1px -1px 3px $overlay-colour,
-						-2px -2px 2px $secondary-colour,
+						-2px -2px 2px $white-colour,
 						0px 1px 3px $overlay-colour,
-						0px 2px 2px $secondary-colour,
+						0px 2px 2px $white-colour,
 						-1px 0px 3px $overlay-colour,
-						-2px 0px 2px $secondary-colour;
+						-2px 0px 2px $white-colour;
 			text-align: center;
 		}
 	}
@@ -34,7 +34,7 @@
 			font-size: 1.2rem;
 			line-height: 1.2rem;
 			margin: 0.5rem 0;
-			color: $secondary-colour;
+			color: $white-colour;
 		}
 
 		&-tag-cloud {
