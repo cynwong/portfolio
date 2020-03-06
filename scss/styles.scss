@@ -23,7 +23,7 @@
 }
 
 main {
-	@include set-background-image('../bg_images/main/extraSmall.jpeg');
+	@include set-background-image();
 	flex-grow: 999;
 
 	& section {
