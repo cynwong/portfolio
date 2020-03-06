@@ -6,10 +6,6 @@
 		font-size: 14px;
 	}
 	
-	main {
-		@include set-background-image('../bg_images/main/small.jpeg');
-	}
-
 	#home {
 		h2 {
 			margin-left: 8rem;
@@ -46,30 +42,12 @@
 		top: 1rem;
 	}
 
-	main {
-		@include set-background-image('../bg_images/main/medium.jpeg');
-	}
-
-	#home {
-		margin-top: 12rem;
-	}
-
 	#portfolio #projects-container .card-container {
 		flex-basis: 45%;
 	}
 }
 
 @media screen and (min-width: $md) {
-	main {
-		@include set-background-image('../bg_images/main/large.jpeg');
-	}
-	
-	#home {
-		h3 {
-			margin-right: 5rem;
-		}
-	}
-
 	#portfolio #projects-container .card-container {
 		flex-basis: 30%;
 	}
@@ -87,14 +65,6 @@
 	header .btn-menu .btn-menu-burger {
 		right: 0.4rem;
 		top: 0.8rem;
-	}
-
-	main {
-		@include set-background-image('../bg_images/main/extraLarge.jpg');
-	}
-
-	#home {
-		margin-top: 12rem;
 	}
 
 	#portfolio #projects-container .card-container {
