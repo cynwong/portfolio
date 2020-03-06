@@ -18,11 +18,17 @@ export default function Header() {
 	}, []);
 
 	console.log(screenWidth);
+	const displaySiteTitle = () => {
+		if (screenWidth >= 576) {
+			return ( <SiteTitle /> );
+		}
+		return '';
+	}
 	return (
 		<header>
-			<SiteTitle />
+			{ displaySiteTitle() }
 			<MenuButton />
-			{/* <NavMenu /> */}
+			<NavMenu />
 		</header>
 	);
 };
