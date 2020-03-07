@@ -1,8 +1,11 @@
 import React from 'react';
 
+// style
+import './styles.scss';
+
 export default function Home() {
 	return (
-		<section>
+		<section className='home'>
 			<h2>Hello. I am </h2>
 			<h1>
 				<span className='first-name'>Cynthia</span> Wong,
