@@ -1,0 +1,95 @@
+@import '../../../scssLib/colours', '../../../scssLib/mixin', '../../../scssLib/var';
+
+.btn-menu {
+	position: absolute;
+	right: 1rem;
+	top: 1rem;
+	z-index: 1;
+	width: 35px;
+	height: 35px;
+
+	background: $pink-colour;
+
+	border-radius: 5px;
+
+	cursor: pointer;
+	
+	&-burger {
+		position: absolute;
+		right: 0.7rem;
+		top: 1.3rem;
+		width: 20px;
+		height: 3px;
+
+		background: $white-colour;
+
+		@include animate;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: -7px;
+			width: 20px;
+			height: 3px;
+
+			background: $white-colour;
+
+			@include animate;
+		}
+
+		&::after {
+			content: '';
+
+			position: absolute;
+			top: 7px;
+			width: 20px;
+			height: 3px;
+
+			background: $white-colour;
+
+			@include animate;
+		}
+
+		&.open {
+			background: transparent;
+			
+			transform: rotate(720deg);
+
+			&::before {
+				transform: rotate(45deg) translate(5px, 4px);
+			}
+
+			&::after {
+				transform: rotate(-45deg) translate(6px, -5px);
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 600px) {
+	.btn-menu .btn-menu-burger {
+		right: 0.51rem;
+		top: 1.15rem;
+	}
+}
+
+@media screen and (min-width: 700px) {
+	.btn-menu .btn-menu-burger {
+		right: 0.49rem;
+		top: 1.08rem;
+	}
+}
+
+@media screen and (min-width: $sm) {
+	.btn-menu .btn-menu-burger {
+		right: 0.5rem;
+		top: 1rem;
+	}
+}
+
+@media screen and (min-width: $lg) {
+	.btn-menu .btn-menu-burger {
+		right: 0.4rem;
+		top: 0.8rem;
+	}
+}
