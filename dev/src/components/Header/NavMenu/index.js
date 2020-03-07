@@ -1,22 +1,19 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+
+// component
+import NavItem from './NavItem';
+
+// style
+import './styles.scss';
 
 export default function index() {
 	return (
 		<nav className='menu'>
 			<ul>
-				<li className='menu-item'>
-					<NavLink className='menu-link' to='/'>Home</NavLink>
-				</li>
-				<li className='menu-item'>
-					<NavLink className='menu-link' to='/about'>About Me</NavLink>
-				</li>
-				<li className='menu-item'>
-					<NavLink className='menu-link' to='/portfolio'>Portfolio</NavLink>
-				</li>
-				<li className='menu-item'>
-					<NavLink className='menu-link' to='/contact'>Contact Me</NavLink>
-				</li>
+				<NavItem label='Home' to='/' />
+				<NavItem label='About Me' to='/about' />
+				<NavItem label='My Portfolio' to='/portfolio' />
+				<NavItem label='Contact Me' to='/contact' />
 			</ul>
 		</nav>
 	)
