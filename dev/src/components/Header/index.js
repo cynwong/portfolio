@@ -4,6 +4,9 @@ import MenuButton from './MenuButton';
 import NavMenu from './NavMenu';
 import SiteTitle from './SiteTitle';
 
+// style
+import './styles.scss';
+
 export default function Header() {
 	const isClient =  typeof window === 'object';
 	const getWidth = () => isClient ? window.innerWidth : undefined;
@@ -25,9 +28,9 @@ export default function Header() {
 		return '';
 	}
 	return (
-		<header>
-			{ displaySiteTitle() }
+		<header className='header'>
 			<MenuButton />
+			{ displaySiteTitle() }
 			<NavMenu />
 		</header>
 	);
