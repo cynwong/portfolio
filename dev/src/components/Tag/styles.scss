@@ -1,10 +1,10 @@
-@import '../../../../../scssLib/colours';
+@import '../../scssLib/colours';
 
-.card-container .card-content-tags li:not(:first-child):not(:last-child){
+.tag:not(:first-child):not(:last-child){
 	margin: 0 3px;
 }
 
-.card-container .card-content-tags li {
+.tag {
 	font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	background: $tag-background-colour;
 	padding: 5px 10px;
@@ -12,4 +12,16 @@
 	color: $pink-colour;
 	font-size: 0.8rem;
 	cursor: default;
+}
+
+.tag.api {
+	color: $tag-api;
+}
+
+.tag.js {
+	color: $tag-js;
+}
+
+.tag.stylesheet {
+	color: $tag-stylesheet;
 }
