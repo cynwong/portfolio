@@ -1,4 +1,5 @@
-@import '../../../scssLib/colours', '../../../scssLib/mixin', '../../../scssLib/var';
+@import '../../../scssLib/colours';
+@import '../../../scssLib/mixin', '../../../scssLib/var';
 
 .portfolio {
 	overflow: scroll;
@@ -14,7 +15,6 @@
 		align-items: center;
 		
 		@include full-width;		
-
-		
 	}
 }
+
