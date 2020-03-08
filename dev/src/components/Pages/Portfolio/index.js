@@ -1,8 +1,11 @@
 import React, { useState, setState } from 'react';
 
+import Card from '../../Card';
+
 import './styles.scss';
 
 import { PORTFOLIO_DATA } from '../../../data';
+
 
 
 export default function Portfolio() {
@@ -10,7 +13,7 @@ export default function Portfolio() {
 	return (
 		<section className='portfolio'>
 			<div className='projects-container'>
-				Projects list
+				{projects.map(project => <Card project={project} />)}
 			</div>
 		</section>
 	)
