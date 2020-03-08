@@ -1,59 +1,74 @@
 @import '../../../../scssLib/colours', '../../../../scssLib/mixin';
 
 .menu-item {
-	transform: translateX(100vw);
-	@include animate;
-
-	& > .menu-link {
-		display: inline-block;
-		font-size: 1.5rem;
-		text-transform: uppercase;
-		padding: 2rem 0;
-		font-weight: 100;
-		color: $white-colour;
-		text-shadow: 0px 0px 2px $black-colour, 2px 2px 6px $black-colour;
-		cursor: pointer;
-		@include animate;
-
-		&:hover {
-			background-color: rgba($pink-colour, 0.5);
-			color: $white-colour;
-			font-weight: 700;
-			padding: 25px;
-			border-radius: 50%;
-			width: 15rem;
-			text-align: center;
-		}
+	margin: 0 0.5rem;
+	& a {
+		color: white;
 	}
 
-	&.active {
-		color: $white-colour;
-		text-shadow: 0px 0px 2px $border-colour;
-		
-		& .menu-link {
-
-			&::before {
-				content: ' >> '
-			}
-
-			&::after {
-				content: ' << '
-			}
-
-			&:hover {
-				background: inherit;
-				color: inherit;
-				cursor: default;
-			}
+	&:hover, &:focus, &:active {
+		transform: scale(1.2);
+		@include animate(1s);
+		& a {
+			color: $pink-colour;
 		}
-
-		
-		
 	}
 }
 
-@for $i from 1 through 4 {
-	.menu-item:nth-child(#{$i}) {
-		transition-delay: ($i * 0.1s) + 0.15s;
-	}
-}
+// .menu-item {
+// 	transform: translateX(100vw);
+// 	@include animate;
+
+// 	& > .menu-link {
+// 		display: inline-block;
+// 		font-size: 1.5rem;
+// 		text-transform: uppercase;
+// 		padding: 2rem 0;
+// 		font-weight: 100;
+// 		color: $white-colour;
+// 		text-shadow: 0px 0px 2px $black-colour, 2px 2px 6px $black-colour;
+// 		cursor: pointer;
+// 		@include animate;
+
+// 		&:hover {
+// 			background-color: rgba($pink-colour, 0.5);
+// 			color: $white-colour;
+// 			font-weight: 700;
+// 			padding: 25px;
+// 			border-radius: 50%;
+// 			width: 15rem;
+// 			text-align: center;
+// 		}
+// 	}
+
+// 	&.active {
+// 		color: $white-colour;
+// 		text-shadow: 0px 0px 2px $border-colour;
+		
+// 		& .menu-link {
+
+// 			&::before {
+// 				content: ' >> '
+// 			}
+
+// 			&::after {
+// 				content: ' << '
+// 			}
+
+// 			&:hover {
+// 				background: inherit;
+// 				color: inherit;
+// 				cursor: default;
+// 			}
+// 		}
+
+		
+		
+// 	}
+// }
+
+// @for $i from 1 through 4 {
+// 	.menu-item:nth-child(#{$i}) {
+// 		transition-delay: ($i * 0.1s) + 0.15s;
+// 	}
+// }
