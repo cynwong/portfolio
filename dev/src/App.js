@@ -1,4 +1,4 @@
-import React, { createContext, useState, useEffect }  from 'react';
+import React, { useState, useEffect }  from 'react';
 import { 
 	BrowserRouter as Router, 
 	Route,
@@ -15,6 +15,9 @@ import Home from './components/Pages/Home';
 import Portfolio from './components/Pages/Portfolio';
 import ProjectDetail from './components/Pages/ProjectDetail';
 
+// util
+import ScreenWidthContext from './utils/ScreenWidthContext';
+
 // style
 import './App.scss';
 
@@ -24,7 +27,6 @@ function App() {
 	const getWidth = () => isClient ? window.innerWidth : undefined;
 
 	const [screenWidth, setScreenWidth] = useState(getWidth());
-	const ScreenWidthContext = createContext();
 
 	useEffect(() => {
 		if(!isClient) return false;
