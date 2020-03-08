@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 import Tag from '../Tag';
 
@@ -12,7 +13,6 @@ export default function Card(props) {
 		mainTags: tags,
 		summary
 	} = props.project;
-	console.log(tags)
 	return (
 		<div className='card-container'>
 			<div className='card'>
@@ -31,7 +31,12 @@ export default function Card(props) {
 						{tags.map((tag) => <Tag tag={tag} />)}
 					</ul>
 					<p className='card-content-body'>{summary}</p>
-					<a className='btn btn-more'>Learn More &gt;</a>
+					<NavLink 
+						className='btn btn-more'
+						to={`projects/${props.id}`}
+					>
+						Learn More &gt;
+					</NavLink>
 				</div>
 			</div>
 		</div>
