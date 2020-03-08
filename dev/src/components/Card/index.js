@@ -10,7 +10,7 @@ export default function Card(props) {
 		imageUrl,
 		imageCaption,
 		mainTags: tags,
-		description
+		summary
 	} = props.project;
 	console.log(tags)
 	return (
@@ -30,7 +30,7 @@ export default function Card(props) {
 					<ul className='card-content-tags'>
 						{tags.map((tag) => <Tag tag={tag} />)}
 					</ul>
-					<p className='card-content-body'>{description}</p>
+					<p className='card-content-body'>{summary}</p>
 					<a className='btn btn-more'>Learn More &gt;</a>
 				</div>
 			</div>
