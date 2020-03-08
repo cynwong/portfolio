@@ -135,8 +135,8 @@ const {
     ticketMaster
 } = TAG_NAMES;
 
-export const PORTFOLIO_DATA = [
-	{
+export const PORTFOLIO_DATA = {
+	'recipelover': {
 		name: 'Recipe Lover',
 		imageUrl: './image/projects/RecipeLover.png',
 		imageCaption: 'Recipe Lover screen image',
@@ -147,7 +147,7 @@ export const PORTFOLIO_DATA = [
         mainTags: [node, scss, express, mysql],
         otherTags: [jquery, ajax, passport, agile, handlebars]
     },
-    {
+    'searchy': {
 		name: 'Searchy',
 		imageUrl: './image/projects/Searchy.png',
 		imageCaption: 'Searchy image',
@@ -158,7 +158,7 @@ export const PORTFOLIO_DATA = [
         mainTags: [api, bulma, html5, js],
         otherTags: [html, css, css3, jquery, moment, ticketMaster,agile]
     },
-    {
+    'dayplanner': {
 		name: 'Day Planner',
 		imageUrl: './image/projects/Scheduler.png',
 		imageCaption: 'Day Planner image',
@@ -169,7 +169,7 @@ export const PORTFOLIO_DATA = [
         mainTags: [html5, bootstrap, js],
         otherTags: [html, css, css3, fa, jquery, moment]
     },
-    {
+    'weatherdashboard': {
 		name: 'Weather Dashboard',
 		imageUrl: './image/projects/WeatherDashboard.png',
 		imageCaption: 'Weather Dashboard image',
@@ -180,4 +180,4 @@ export const PORTFOLIO_DATA = [
         mainTags: [html5, bootstrap, js, api],
         otherTags: [html,css,css3,fa, jquery, moment, openWeather]
     },
-];
+};
