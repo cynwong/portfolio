@@ -36,6 +36,7 @@
 			&:hover, &:active, &:focus {
 				& svg {
 					transform: scale(1.6);
+					@include animate;
 					opacity: 1;
 				}
 				
