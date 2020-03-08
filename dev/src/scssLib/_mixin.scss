@@ -1,38 +1,38 @@
-@mixin animate {
-	transition: all 0.5s ease-in-out;
+@mixin animate($duration:0.5s) {
+	transition: all $duration ease-in-out;
 }
 
 @mixin set-background-image(){
 	background: 
 		linear-gradient(
 			to right, 
-			rgba($overlay-colour, 0.8)
+			rgba($overlay-colour, 0.8),
 			rgba($overlay-colour, 0.2)
 		),
-		url('./assets/bg_images/main/extraLarge.jpg') 10% 5px;
+		url('../image/background.jpg') 10% 5px;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
 
 @mixin btn {
 	display: block;
-	width: 10rem; 
+	width: 9rem; 
 	margin-top: 3rem;
 	margin-left: auto;
 	margin-right: auto;
 	color: $white-colour;
-	padding: 1.5rem;
+	padding: 1rem;
 	text-align: center;
 	border-radius: $pill-corner;
 	border: 1px solid $white-colour;
 
 
 	&:hover, &:focus, &:active {
-		color: $pink-colour;
-		border: 4px solid $pink-colour;
-		transform: scale(1.05);
-		font-weight: 900;
-		@include animate;
+		background-color: $pink-colour;
+		color: $white-colour;
+		border-color: $pink-colour;
+		transform: scale(1.2);
+		@include animate(1s);
 	}
 }
 
