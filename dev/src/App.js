@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import About from './components/Pages/About';
+import Contact from './components/Pages/Contact';
 import Home from './components/Pages/Home';
 
 // style
@@ -20,6 +21,7 @@ function App() {
 				<main>
 					<Route exact path='/' component={Home} />
 					<Route exact path='/about' component={About} />
+					<Route exact path='/contact' component={Contact} />
 				</main>
 				<Footer />
 			</div>
