@@ -12,11 +12,12 @@ import Header from './components/Header';
 import About from './components/Pages/About';
 import Contact from './components/Pages/Contact';
 import Home from './components/Pages/Home';
+import NavMenu from './components/NavMenu';
 import Portfolio from './components/Pages/Portfolio';
 import ProjectDetail from './components/Pages/ProjectDetail';
 
 // util
-import ScreenWidthContext from './utils/ScreenWidthContext';
+import AppContext from './utils/AppContext';
 
 // style
 import './App.scss';
@@ -27,6 +28,18 @@ function App() {
 	const getWidth = () => isClient ? window.innerWidth : undefined;
 
 	const [screenWidth, setScreenWidth] = useState(getWidth());
+	const [openMenu, setOpenMenu] = useState(false);
+
+	const onMenuButtonClick = (e) => {
+		e.preventDefault();
+		setOpenMenu(!openMenu);
+	}
+	
+	const appContext = {
+		isMobile: (screenWidth < 576),
+		openMenu,
+		onMenuButtonClick
+	}
 
 	useEffect(() => {
 		if(!isClient) return false;
@@ -37,22 +50,25 @@ function App() {
 
 	return (
 		<Router>
-			<ScreenWidthContext.Provider value={screenWidth}>
+			<AppContext.Provider value={appContext}>
 				<div className='wrapper'>
 					<Header />
 					<main>
-						<Switch>
-							<Route exact path='/' component={Home} />
-							<Route exact path='/about' component={About} />
-							<Route exact path='/contact' component={Contact} />
-							<Route exact path='/portfolio' component={Portfolio} />
-							<Route path='/projects/:id' component={ProjectDetail} />
-							<Route path='*'><Redirect to='/' /></Route>
-						</Switch>
+						{appContext.isMobile && <NavMenu />}
+						{!openMenu && (
+							<Switch>
+								<Route exact path='/' component={Home} />
+								<Route exact path='/about' component={About} />
+								<Route exact path='/contact' component={Contact} />
+								<Route exact path='/portfolio' component={Portfolio} />
+								<Route path='/projects/:id' component={ProjectDetail} />
+								<Route path='*'><Redirect to='/' /></Route>
+							</Switch>
+						)}
 					</main>
 					<Footer />
 				</div>
-			</ScreenWidthContext.Provider>
+			</AppContext.Provider>
 		</Router>
 	);
 }
