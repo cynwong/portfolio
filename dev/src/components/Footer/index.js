@@ -10,7 +10,7 @@ import './styles.scss';
 export default function Footer() {
 	return (
 		<footer className='footer'>
-			<div class='social-icons'>
+			<div className='social-icons'>
 				<a href='mailto:cynthiaswong88@gmail.com'>
 					<FontAwesomeIcon icon={faEnvelope} size='2x' title='Email me' />
 				</a>
@@ -24,7 +24,7 @@ export default function Footer() {
 					<FontAwesomeIcon icon={faLinkedin} size='2x' title='Github' />
 				</a>
 			</div>
-			<div class="credit">
+			<div className="credit">
 				<p>Background photo credit: <a href="https://unsplash.com/@pankajpatel?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Pankaj Patel</a></p>
 				<p>Made with &hearts;.</p>
 			</div>
