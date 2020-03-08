@@ -1,0 +1,72 @@
+#project-details {
+
+	& .modal-header {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+
+		& .modal-title{
+			font-size: 2rem;
+			margin: 1rem;
+			color: $pink-colour;
+			text-shadow: 
+						1px 1px 3px $overlay-colour,
+						2px 2px 2px $white-colour, 
+						-1px -1px 3px $overlay-colour,
+						-2px -2px 2px $white-colour,
+						0px 1px 3px $overlay-colour,
+						0px 2px 2px $white-colour,
+						-1px 0px 3px $overlay-colour,
+						-2px 0px 2px $white-colour;
+			text-align: center;
+		}
+	}
+
+	& .modal-body {
+		@include full-width;
+
+		&-image {
+			width:100%;
+			border-radius: 1rem;
+		}
+
+		&-description {
+			font-size: 1.2rem;
+			line-height: 1.2rem;
+			margin: 0.5rem 0;
+			color: $white-colour;
+		}
+
+		&-tag-cloud {
+			list-style: none;
+			display: flex;
+			flex-flow: row wrap;
+			margin-top: 0.9rem;
+			margin-bottom: 0.9rem;
+
+			& li:not(:first-child):not(:last-child) {
+				margin-left: 0.4rem;
+				margin-right: 0.4rem;
+			}
+
+			li {
+				margin: 0.2rem;
+				background-color: $tag-background-colour;
+				color: $pink-colour;
+				border-radius: 5rem;
+				padding: 0.5rem 1rem;
+			}
+		}
+	}
+
+	& .modal-footer {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		align-items: center;
+
+		& > * {
+			@include btn;
+		}
+	}
+}
