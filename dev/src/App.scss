@@ -1,0 +1,43 @@
+@import './scssLib/colours', './scssLib/mixin', './scssLib/var';
+
+:root {
+	font-size: 12px;
+}
+
+.wrapper {
+	display: flex;
+	flex-flow: column;
+	width: 100vw;
+	height: 100vh;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	color: $white-colour;
+	background-color: $dark-gray-colour;
+}
+
+main {
+	@include set-background-image();
+	flex-grow: 999;
+
+	& section {
+		width: 94vw;
+		margin: 6rem auto;
+	}
+}
+
+@media screen and (min-width: $xs) {
+	:root {
+		font-size: 14px;
+	}
+}
+
+@media screen and (min-width: $sm) {
+	:root {
+		font-size: 16px;
+	}
+}
+
+@media screen and (min-width: $lg) {
+	:root {
+		font-size: 20px;
+	}
+}
