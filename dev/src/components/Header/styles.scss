@@ -5,6 +5,12 @@
 	position: fixed;
 	top: 0;
 	width: 100vw;
-	background-color: $black-colour;
 	min-height: 5rem;
+	padding: 5px 1.5rem;
+
+	background-color: $black-colour;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
