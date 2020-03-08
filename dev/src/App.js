@@ -22,6 +22,9 @@ import AppContext from './utils/AppContext';
 // style
 import './App.scss';
 
+// data 
+import { PORTFOLIO_DATA } from './data';
+
 function App() {
 	// get Screen width
 	const isClient =  typeof window === 'object';
@@ -38,7 +41,8 @@ function App() {
 	const appContext = {
 		isMobile: (screenWidth < 576),
 		openMenu,
-		onMenuButtonClick
+		onMenuButtonClick, 
+		portfolioData: PORTFOLIO_DATA,
 	}
 
 	useEffect(() => {
