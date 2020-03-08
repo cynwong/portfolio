@@ -144,7 +144,7 @@ export const PORTFOLIO_DATA = [
         deployedURL: 'https://hhop-recipe-blog.herokuapp.com/',
         summary: 'A group project where I was responsible for backend development.',
         description: 'Recipe Lover is  is a blogging application used to store recipes.',
-        mainTags: [js, node, scss, express, mysql],
+        mainTags: [node, scss, express, mysql],
         otherTags: [jquery, ajax, passport, agile, handlebars]
     },
     {
