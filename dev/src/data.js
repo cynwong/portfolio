@@ -48,7 +48,6 @@ const {
     bulma,
     css,
     css3,
-	ejs,
 	express,
     fa,
     html,
