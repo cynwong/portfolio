@@ -72,19 +72,3 @@
 	background-color: rgba($black-colour, 0.75);
 	padding: 3rem 1rem;
 }
-
-@mixin tag {
-	li:not(:first-child):not(:last-child){
-		margin: 0 3px;
-	}
-
-	li {
-		font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-		background: $tag-background-colour;
-		padding: 5px 10px;
-		border-radius: 15px;
-		color: $pink-colour;
-		font-size: 0.8rem;
-		cursor: default;
-	}
-}
