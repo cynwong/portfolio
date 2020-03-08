@@ -1,17 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
+
+// utils
+import AppContext from '../../../utils/AppContext';
 
 // style
 import './styles.scss';
 
 export default function MenuButton() {
-	const handleOnClick = (e) => {
-		e.preventDefault();
-		console.log('button clicked.')
-
-	};
+	const { 
+		openMenu,
+		onMenuButtonClick
+	} = useContext(AppContext);
 	return (
-		<div className='btn-menu' onClick={handleOnClick}>
-			<span className='btn-menu-burger'></span>
+		<div className='btn-menu' onClick={onMenuButtonClick}>
+			<span className={openMenu? 'btn-menu-burger open': 'btn-menu-burger'}></span>
 		</div>
 	)
 }
