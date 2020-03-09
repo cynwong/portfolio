@@ -85,9 +85,21 @@ export const TAG_NAMES = {
 		label: 'MySQL',
 		category: 'database'
 	},
+	mongoDB: {
+		label: 'MongoDB',
+		category: 'database'
+	},
+	mongoose: {
+		label: 'Mongoose.js',
+		category: 'database'
+	},
+	noSql: {
+		label: 'NoSQL',
+		category: 'database'
+	},
 	sequelize: {
 		label: 'Sequelize.js',
-		category: 'js'
+		category: 'database'
 	},
     node: {
 		label: 'Node.js',
@@ -96,6 +108,10 @@ export const TAG_NAMES = {
 	openWeather: {
 		label: 'Open Weather API',
 		category: 'api'
+	},
+	orm: {
+		label: 'Object-Relational Mapping(ORM)',
+		category: 'database'
 	},
 	passport: {
 		label: 'Passport.js',
@@ -108,6 +124,10 @@ export const TAG_NAMES = {
     ticketMaster: {
 		label: 'Ticketmaster API',
 		category: 'api'
+	},
+	typescript: {
+		label: 'Typescript.js',
+		category: 'js'
 	}
 };
 
@@ -118,7 +138,8 @@ const {
     bootstrap,
     bulma,
     css,
-    css3,
+	css3,
+	ejs,
 	express,
 	fa,
 	handlebars,
@@ -128,12 +149,17 @@ const {
     jquery,
 	moment,
 	mysql,
+	mongoose,
+	mongoDB,
     node,
+	noSql,
 	openWeather,
+	orm,
 	passport,
 	scss,
 	sequelize,
-    ticketMaster
+	ticketMaster,
+	typescript
 } = TAG_NAMES;
 
 export const PORTFOLIO_DATA = {
@@ -158,6 +184,28 @@ export const PORTFOLIO_DATA = {
         description: 'Searchy is a single-page web application which allows users to search the desired events and keeps track of them. In this project, as a member of development team, I was responsible for rendition of the data for the application and assisted the teammates in both page design, development, and project management.',
         mainTags: [api, bulma, html5, js],
         otherTags: [html, css, css3, jquery, moment, ticketMaster,agile]
+	},
+	'workouttracker': {
+		name: 'Workout Tracker',
+		imageUrl: './Fitness Tracker.png',
+		imageCaption: 'Workout Tracker image',
+        githubUrl: 'https://github.com/cynwong/Workout-Tracker',
+        deployedUrl: 'https://workout-tracker-cw.herokuapp.com/',
+        summary: 'Logger for workout',
+        description: 'Workout tracker is an application where user can log their workout schedule. I was responsible for the backend/server-side development for this application.',
+        mainTags: [typescript, node, mongoose],
+        otherTags: [express, mongoDB, noSql, ejs]
+	},
+	'employeetracker': {
+		name: 'Employee Tracker',
+		imageUrl: './Employee Tracker.png',
+		imageCaption: 'Employee Tracker image',
+        githubUrl: 'https://github.com/cynwong/EmployeeTracker',
+        deployedUrl: 'https://employee-tracker-cw.herokuapp.com/',
+        summary: 'A Human Resource Management Application',
+        description: 'Employee Tracker is an application used for Human Resource Management to keep track of employee\'s information.',
+        mainTags: [node, express, mysql],
+        otherTags: [html,css,bootstrap, orm, js]
     },
     'dayplanner': {
 		name: 'Day Planner',
