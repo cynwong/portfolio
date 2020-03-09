@@ -3,8 +3,11 @@
 
 .portfolio {
 	overflow: scroll;
-	& .template {
-		display: none;
+	& .search-container{
+		display: flex;
+		justify-content: flex-end;
+		padding-top: 0.5rem;
+		padding-right: 2.5rem;
 	}
 
 	& .projects-container{
