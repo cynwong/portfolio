@@ -1,32 +1,37 @@
-#project-details {
+@import '../../../scssLib/colours', '../../../scssLib/mixin';
+@import '../../../scssLib/var';
 
-	& .modal-header {
+.project-details {
+	background-color: rgba(16, 18, 23, 0.75);
+	padding: 0.8rem 1rem;
+
+	&-header {
 		display: flex;
 		flex-direction: row;
-		justify-content: space-around;
+		justify-content: flex-start;
 
-		& .modal-title{
+		&-title{
 			font-size: 2rem;
 			margin: 1rem;
 			color: $pink-colour;
 			text-shadow: 
 						1px 1px 3px $overlay-colour,
-						2px 2px 2px $white-colour, 
+						2px 2px 2px $dark-gray-colour, 
 						-1px -1px 3px $overlay-colour,
-						-2px -2px 2px $white-colour,
+						-2px -2px 2px $dark-gray-colour,
 						0px 1px 3px $overlay-colour,
-						0px 2px 2px $white-colour,
+						0px 2px 2px $dark-gray-colour,
 						-1px 0px 3px $overlay-colour,
-						-2px 0px 2px $white-colour;
-			text-align: center;
+						-2px 0px 2px $dark-gray-colour;
 		}
 	}
 
-	& .modal-body {
+	&-body {
 		@include full-width;
 
 		&-image {
 			width:100%;
+			min-height: 50vh;
 			border-radius: 1rem;
 		}
 
@@ -43,23 +48,10 @@
 			flex-flow: row wrap;
 			margin-top: 0.9rem;
 			margin-bottom: 0.9rem;
-
-			& li:not(:first-child):not(:last-child) {
-				margin-left: 0.4rem;
-				margin-right: 0.4rem;
-			}
-
-			li {
-				margin: 0.2rem;
-				background-color: $tag-background-colour;
-				color: $pink-colour;
-				border-radius: 5rem;
-				padding: 0.5rem 1rem;
-			}
 		}
 	}
 
-	& .modal-footer {
+	&-footer {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-around;
@@ -67,6 +59,10 @@
 
 		& > * {
 			@include btn;
+
+			svg {
+				margin-right: 0.5rem;
+			}
 		}
 	}
 }
