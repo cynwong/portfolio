@@ -1,0 +1,12 @@
+@import '../../../../scssLib/var';
+
+.search-box {
+	display: block;
+	border-radius: $rounded-corner;
+	width: 12rem;
+	padding: 0.3rem 0.5rem;
+
+	&:focus{
+		outline: none;
+	}
+}
