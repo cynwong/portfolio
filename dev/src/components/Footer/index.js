@@ -14,13 +14,13 @@ export default function Footer() {
 				<a href='mailto:cynthiaswong88@gmail.com'>
 					<FontAwesomeIcon icon={faEnvelope} size='2x' title='Email me' />
 				</a>
-				<a href='https://github.com/cynwong' target='_blank'>
+				<a href='https://github.com/cynwong' target='_blank' rel="noopener noreferrer">
 					<FontAwesomeIcon icon={faGithub} size='2x' title='Github' />
 				</a>
-				<a href='https://cynw.wordpress.com' target='_blank'>
+				<a href='https://cynw.wordpress.com' target='_blank' rel="noopener noreferrer">
 					<FontAwesomeIcon icon={faWordpress} size='2x' title='Github' />
 				</a>
-				<a href='https://www.linkedin.com/in/cynthia-wong-29944348/' target='_blank'>
+				<a href='https://www.linkedin.com/in/cynthia-wong-29944348/' target='_blank' rel="noopener noreferrer">
 					<FontAwesomeIcon icon={faLinkedin} size='2x' title='Github' />
 				</a>
 			</div>

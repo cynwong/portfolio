@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faExternalLinkAlt, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 
 import Tag from '../../Tag';
 
@@ -77,18 +77,14 @@ export default function ProjectDetail(props) {
 				</ul>
 			</div>
 			<div className='project-details-footer'>
-				<a className='btn btn-site' href={deployedUrl} target='_blank'>
+				<a className='btn btn-site' href={deployedUrl} target='_blank' rel="noopener noreferrer">
 					<FontAwesomeIcon icon={faExternalLinkAlt} title='Deployed site' />
 					<span className='tooltip right'>Visit site</span>
 				</a>
-				<a className='btn btn-github' href={githubUrl} target='_blank'>
+				<a className='btn btn-github' href={githubUrl} target='_blank' rel="noopener noreferrer">
 					<FontAwesomeIcon icon={faGithub} title='GitHub' />
 					<span className='tooltip left'>View code</span>
 				</a>
-				<span className='btn-close-project-details'>
-					<FontAwesomeIcon icon={faTimes} title='Close' />
-					Close
-				</span>
 			</div>
 		</section>
 	)
