@@ -18,6 +18,9 @@ main {
 	@include set-background-image();
 	flex-grow: 999;
 
+	max-height: 1000px;
+	overflow: scroll;
+
 	& section {
 		width: 94%;
 		margin: 6rem auto;
