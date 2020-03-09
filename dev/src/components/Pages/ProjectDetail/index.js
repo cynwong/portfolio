@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { useHistory } from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
@@ -12,7 +13,7 @@ import './styles.scss';
 
 export default function ProjectDetail(props) {
 	const { id } = props.match.params;
-	const { portfolioData } = useContext(AppContext);
+	const { screenSize, portfolioData } = useContext(AppContext);
 	const {
 		name, 
 		imageUrl,
@@ -23,9 +24,37 @@ export default function ProjectDetail(props) {
 		mainTags,
 		otherTags,
 	} = portfolioData[id];
+
+	// load all images
 	const images = require.context('../../../images/projects', true);
+
+	// calculate indexes
+	const keys = Object.keys(portfolioData);
+	const currentIndex = keys.indexOf(id);
+	const length = keys.length;
+	const nextIndex = currentIndex < length - 1 ? currentIndex + 1 : 0;
+	const nextKey = keys[nextIndex];
+	const prevIndex = currentIndex <= 0 ? keys.length - 1 : currentIndex - 1;
+	const prevKey = keys[prevIndex];
+	
+	const history = useHistory();
+
+	const onClickHandler = (e) => {
+		e.preventDefault();
+		const xCoord = e.pageX;
+
+		if( xCoord < (screenSize / 4)){
+			// go to previous project
+			return history.push(`/projects/${prevKey}`);
+		} else if ( xCoord > ((screenSize * 3) / 4)){
+			// go to next project
+			return history.push(`/projects/${nextKey}`);
+		}
+	}
+
+	
 	return (
-		<section className="project-details">
+		<section className="project-details" onClick={onClickHandler}>
 			<div className='project-details-header'>
 				<h2 className='project-details-header-title'>
 					{name}
