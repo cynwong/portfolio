@@ -20,8 +20,9 @@ export default function Card(props) {
 				<div className="card-front">
 					<img 
 						className='card-front-image' 
-						data-src={images(imageUrl)}
-						src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mOMrgcAATsA3BT31OAAAAAASUVORK5CYII=" 
+						src={images(imageUrl)}
+						// data-src={images(imageUrl)}
+						// src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mOMrgcAATsA3BT31OAAAAAASUVORK5CYII=" 
 						alt={imageCaption}
 					/>
 					<div className="card-front-title">{name}</div>
