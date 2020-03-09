@@ -14,7 +14,6 @@ import './styles.scss';
 export default function ProjectDetail(props) {
 	const { id } = props.match.params;
 	const { 
-		screenSize,
 		portfolioData,
 		mainRef
 	} = useContext(AppContext);
