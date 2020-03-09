@@ -1,4 +1,4 @@
-import React, { useState, useEffect }  from 'react';
+import React, { useState, useEffect, useRef }  from 'react';
 import { 
 	BrowserRouter as Router, 
 	Route,
@@ -32,6 +32,7 @@ function App() {
 
 	const [screenWidth, setScreenWidth] = useState(getWidth());
 	const [openMenu, setOpenMenu] = useState(false);
+	const mainRef = useRef();
 
 	const onMenuButtonClick = (e) => {
 		e.preventDefault();
@@ -44,6 +45,7 @@ function App() {
 		openMenu,
 		onMenuButtonClick, 
 		portfolioData: PORTFOLIO_DATA,
+		mainRef,
 	}
 
 	useEffect(() => {
@@ -51,14 +53,14 @@ function App() {
 		const handleResize = () => setScreenWidth(getWidth());
 		window.addEventListener('resize', handleResize);
 		return () => window.removeEventListener('resize', handleResize);
-	}, []);
+	});
 
 	return (
 		<Router>
 			<AppContext.Provider value={appContext}>
 				<div className='wrapper'>
 					<Header />
-					<main>
+					<main ref={mainRef}>
 						{appContext.isMobile && <NavMenu />}
 						{!openMenu && (
 							<Switch>
