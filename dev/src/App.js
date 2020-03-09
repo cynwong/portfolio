@@ -40,7 +40,6 @@ function App() {
 	}
 	
 	const appContext = {
-		screenSize: screenWidth,
 		isMobile: (screenWidth < 576),
 		openMenu,
 		onMenuButtonClick, 
