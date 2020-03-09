@@ -1,18 +1,18 @@
 export const BRAND_FA_CLASSES = {
-    android: 'fab fa-android',
-    angular: 'fab fa-angular',
-    bootstrap: 'fab fa-bootstrap',
-    css3: 'fabfa-css3',
-    'font-awesome': 'fab fa-font-awesome',
-    html5: 'fab fa-html5',
-    github: 'fab fa-github',
-    gitlab: 'fab fa-gitlab',
-    javascript: 'fab fa-js',
-    markdown: 'fab fa-markdown',
-    'node-js': 'fab fa-node-js',
-    npm: 'fab fa-npm',
-    python: 'fab fa-python',
-    'stack-overflow': 'fab fa-stack-overflow',
+    faAndroid: 'fab fa-android',
+    faAngular: 'fab fa-angular',
+    faBootstrap: 'fab fa-bootstrap',
+    faCss3: 'fabfa-css3',
+    faFontAwesome: 'fab fa-font-awesome',
+    faHtml5: 'fab fa-html5',
+    faGithub: 'fab fa-github',
+    faGitlab: 'fab fa-gitlab',
+    faJavascript: 'fab fa-js',
+    faMarkdown: 'fab fa-markdown',
+    faNodejs: 'fab fa-node-js',
+    faNpm: 'fab fa-npm',
+    faPython: 'fab fa-python',
+    faStackOverflow: 'fab fa-stack-overflow',
 };
 
 /** Tag Names */
@@ -85,7 +85,7 @@ export const TAG_NAMES = {
 		label: 'MySQL',
 		category: 'database'
 	},
-	mysql: {
+	sequelize: {
 		label: 'Sequelize.js',
 		category: 'js'
 	},
@@ -132,6 +132,7 @@ const {
 	openWeather,
 	passport,
 	scss,
+	sequelize,
     ticketMaster
 } = TAG_NAMES;
 
@@ -145,7 +146,7 @@ export const PORTFOLIO_DATA = {
         summary: 'A group project where I was responsible for backend development.',
         description: 'Recipe Lover is  is a blogging application used to store recipes.',
         mainTags: [node, scss, express, mysql],
-        otherTags: [jquery, ajax, passport, agile, handlebars]
+        otherTags: [sequelize, jquery, ajax, passport, agile, handlebars]
     },
     'searchy': {
 		name: 'Searchy',
