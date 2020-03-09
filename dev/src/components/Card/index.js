@@ -30,7 +30,7 @@ export default function Card(props) {
 				<div className='card-content'>
 					<h5 className='card-content-title'>{name}</h5>
 					<ul className='card-content-tags'>
-						{tags.map((tag) => <Tag tag={tag} />)}
+						{tags.map((tag, index) => <Tag tag={tag} key={index}/>)}
 					</ul>
 					<p className='card-content-body'>{summary}</p>
 					<NavLink 
