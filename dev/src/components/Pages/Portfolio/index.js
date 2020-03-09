@@ -12,7 +12,7 @@ export default function Portfolio() {
 	return (
 		<section className='portfolio'>
 			<div className='projects-container'>
-				{Object.entries(projects).map(([key, project]) => <Card project={project} id={key} />)}
+				{Object.entries(projects).map(([key, project]) => <Card project={project} id={key} key={key} />)}
 			</div>
 		</section>
 	)
