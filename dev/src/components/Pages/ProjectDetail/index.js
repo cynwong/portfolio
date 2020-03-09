@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -13,7 +13,11 @@ import './styles.scss';
 
 export default function ProjectDetail(props) {
 	const { id } = props.match.params;
-	const { screenSize, portfolioData } = useContext(AppContext);
+	const { 
+		screenSize,
+		portfolioData,
+		mainRef
+	} = useContext(AppContext);
 	const {
 		name, 
 		imageUrl,
@@ -38,6 +42,12 @@ export default function ProjectDetail(props) {
 	const prevKey = keys[prevIndex];
 	
 	const history = useHistory();
+
+	useEffect(() => {
+		if (mainRef.current) {
+			mainRef.current.scrollIntoView({ behaviour: 'smooth'})
+		}
+	}, [id,mainRef]);
 
 	const onClickHandler = (e) => {
 		e.preventDefault();
