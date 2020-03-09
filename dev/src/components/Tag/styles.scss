@@ -1,7 +1,7 @@
 @import '../../scssLib/colours';
 
 .tag:not(:first-child):not(:last-child){
-	margin: 0 3px;
+	margin: 0.3rem 3px;
 }
 
 .tag {
@@ -12,7 +12,9 @@
 	border-radius: 15px;
 	color: $pink-colour;
 	font-size: 0.7rem;
+	line-height: normal;
 	cursor: default;
+	min-width: fit-content;
 }
 
 .tag.api {
