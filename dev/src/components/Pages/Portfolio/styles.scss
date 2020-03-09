@@ -1,0 +1,22 @@
+@import '../../../scssLib/colours';
+@import '../../../scssLib/mixin', '../../../scssLib/var';
+
+.portfolio {
+	overflow: scroll;
+	& .search-container{
+		display: flex;
+		justify-content: flex-end;
+		padding-top: 0.5rem;
+		padding-right: 2.5rem;
+	}
+
+	& .projects-container{
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: flex-start;
+		align-items: center;
+		
+		@include full-width;		
+	}
+}
+

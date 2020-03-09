@@ -1,0 +1,122 @@
+@import '../../scssLib/colours';
+@import '../../scssLib/mixin';
+@import '../../scssLib/var';
+
+.card-container {
+	flex-basis: 100%;
+	@include contain;
+	height: 15rem;
+	margin: 1rem;
+	background-color: transparent;
+	border-radius: $rounded-corner;
+	cursor: default;
+	perspective: 1000px;
+	box-sizing: border-box;
+	padding: 5px 10px;
+
+	& .card {
+		position: relative;
+		@include contain;
+		@include animate;
+		transform-style: preserve-3d;
+		transform-origin: center right;
+		
+		& > * {
+			@include place-at-card-bottom(true);
+			@include contain;
+			backface-visibility: hidden;
+			border-radius: $rounded-corner;
+		}
+
+		&-front {
+			overflow: contain;
+			background-color: $black-colour;
+			&-image {
+				display: block;
+				margin-top: 5px;
+				margin-left: auto;
+				margin-right: auto;
+				width:100%;
+				height: 100%;
+				border-radius: $rounded-corner;
+			}
+
+			&-title {
+				background-color: rgba($overlay-colour, 0.95);
+				padding: 1rem 1.2rem;
+				@include place-at-card-bottom(false);
+				bottom: -1.5rem;
+				@include project-title;
+				text-align: center;
+				border-bottom-right-radius: $rounded-corner;
+				border-bottom-left-radius: $rounded-corner;
+			}
+		}
+
+		&-content {
+			background-color: $white-colour;
+			padding: 1rem 1.2rem;
+			transform: rotateY(180deg);
+			width: 95%;
+			height: 95%;
+			
+			&-title {
+				@include project-title;
+			}
+			
+			&-tags{
+				display: flex;
+				flex-flow: row wrap;
+				justify-content: flex-start;
+				align-items: center;
+			}
+
+			&-body {
+				margin-top: 5%;
+				margin-bottom: 5%;
+				font-size: 0.75rem;
+				line-height: 1rem;
+				color: $black-colour;
+			}
+
+			& .btn-more {
+				display:block;
+				text-align:right;
+				margin: 0.3rem 0.5rem;
+				cursor: pointer;
+				color: $black-colour;
+
+				&:hover, &:focus, &:active {
+					color:$pink-colour;
+				}
+			}
+		}
+	}
+
+	&:hover {
+		.card {
+			transform: translateX(-100%) rotateY(-180deg);
+		}
+	}
+}
+
+@media screen and (min-width: 600px) {
+	.card-container {
+		flex-basis: 45%;
+	}
+}
+
+@media screen and (min-width: $md) {
+	.card-container {
+		flex-basis: 30%;
+		& .card-front-title {
+			bottom: -1.3rem;
+		}
+	}
+}
+
+@media screen and (min-width: $lg) {
+	.card-container {
+		flex-basis: 28%;
+	}
+}

@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2f57dbf6.chunk.css",
+    "main.js": "/static/js/main.022b444e.chunk.js",
+    "main.js.map": "/static/js/main.022b444e.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.edd88c68.js",
+    "runtime-main.js.map": "/static/js/runtime-main.edd88c68.js.map",
+    "static/js/2.ce471d2b.chunk.js": "/static/js/2.ce471d2b.chunk.js",
+    "static/js/2.ce471d2b.chunk.js.map": "/static/js/2.ce471d2b.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.e8fa10c93bf3317740543469081930e0.js": "/precache-manifest.e8fa10c93bf3317740543469081930e0.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.2f57dbf6.chunk.css.map": "/static/css/main.2f57dbf6.chunk.css.map",
+    "static/js/2.ce471d2b.chunk.js.LICENSE.txt": "/static/js/2.ce471d2b.chunk.js.LICENSE.txt",
+    "static/media/Employee Tracker.png": "/static/media/Employee Tracker.822dba40.png",
+    "static/media/Fitness Tracker.png": "/static/media/Fitness Tracker.19bfe71f.png",
+    "static/media/RecipeLover.png": "/static/media/RecipeLover.e025fa0a.png",
+    "static/media/Scheduler.png": "/static/media/Scheduler.6e2d92ce.png",
+    "static/media/Searchy.png": "/static/media/Searchy.b1ee9907.png",
+    "static/media/WeatherDashboard.png": "/static/media/WeatherDashboard.168c119c.png",
+    "static/media/App.scss": "/static/media/background.782e6056.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.edd88c68.js",
+    "static/js/2.ce471d2b.chunk.js",
+    "static/css/main.2f57dbf6.chunk.css",
+    "static/js/main.022b444e.chunk.js"
+  ]
+}
