@@ -44,7 +44,7 @@ export default function ProjectDetail(props) {
 
 	useEffect(() => {
 		if (mainRef.current) {
-			mainRef.current.scrollIntoView({ behaviour: 'smooth'})
+			mainRef.current.scroll({top: 0, left: 0, behavior: 'smooth' });
 		}
 	}, [id,mainRef]);
 
