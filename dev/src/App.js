@@ -3,7 +3,7 @@ import {
 	BrowserRouter as Router, 
 	Route,
 	Switch,
-	Redirect
+	Redirect,
  } from 'react-router-dom';
 
 // Component
@@ -39,6 +39,7 @@ function App() {
 	}
 	
 	const appContext = {
+		screenSize: screenWidth,
 		isMobile: (screenWidth < 576),
 		openMenu,
 		onMenuButtonClick, 
