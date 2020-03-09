@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 
 import './styles.scss';
 
+import AppContext from '../../../utils/AppContext';
+
 export default function About() {
+	const { mainRef } = useContext(AppContext);
+
+	useEffect(() => {
+		if (mainRef.current) {
+			mainRef.current.scroll({top: 0, left: 0, behavior: 'smooth' });
+		}
+	}, [mainRef]);
+
 	return (
 		<section className='about'>
 				<div className='section-content'>
