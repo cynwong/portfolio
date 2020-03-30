@@ -29,6 +29,10 @@ export const TAG_NAMES = {
 		label: 'API',
 		category: 'api'
 	},
+	axios: {
+		label:  'AJAX',
+		category: 'js'
+	},
     bootstrap : {
 		label: 'Bootstrap CSS Framework',
 		category: 'stylesheet'
@@ -45,9 +49,17 @@ export const TAG_NAMES = {
 		label: 'CSS3',
 		category: 'stylesheet'
 	},
+	cookie: {
+		label: 'Cookie',
+		category: 'database'
+	},
 	express: {
 		label: 'Express.js',
 		category: 'js'
+	},
+	eslint: {
+		label: 'EsLint',
+		category: 'testing'
 	},
     ejs: {
 		label: 'EJS (Embedded JavaScript templates)',
@@ -56,6 +68,10 @@ export const TAG_NAMES = {
     fa: {
 		label: 'Font-Awesome CSS',
 		category: 'stylesheet'
+	},
+	fullCalendar: {
+		label: 'FullCalendar.js',
+		category: 'front-end'
 	},
 	handlebars: {
 		label: 'Handlebars Template Engine',
@@ -69,13 +85,17 @@ export const TAG_NAMES = {
 		label: 'HTML5',
 		category: 'language'
 	},
+	indexedDB: {
+		label: 'IndexedDB API',
+		category: 'database'
+	}, 
     js: {
 		label: 'Vanilla Javascript',
 		category: 'js'
 	},
     jquery: {
 		label: 'jQuery',
-		category: 'js'
+		category: 'front-end'
 	},
 	moment: {
 		label: 'Moment.js',
@@ -101,6 +121,10 @@ export const TAG_NAMES = {
 		label: 'Sequelize.js',
 		category: 'database'
 	},
+	materialUi: {
+		label: 'Material UI',
+		category: 'stylesheet'
+	},
     node: {
 		label: 'Node.js',
 		category: 'js'
@@ -113,9 +137,17 @@ export const TAG_NAMES = {
 		label: 'Object-Relational Mapping(ORM)',
 		category: 'database'
 	},
+	quickEmailVerification: {
+		label: 'QuickEmailVerification',
+		category: 'api'
+	},
 	passport: {
 		label: 'Passport.js',
 		category: 'js'
+	},
+	react: {
+		label: 'React.js',
+		category: 'front-end'
 	},
 	scss: {
 		label: 'SCSS',
@@ -134,19 +166,25 @@ export const TAG_NAMES = {
 const {
 	agile,
 	ajax,
-    api,
+	api,
+	axios,
     bootstrap,
     bulma,
     css,
 	css3,
+	cookie,
 	ejs,
+	eslint,
 	express,
 	fa,
+	fullCalendar,
 	handlebars,
     html,
-    html5,
+	html5,
+	indexedDB,
     js,
-    jquery,
+	jquery,
+	materialUi,
 	moment,
 	mysql,
 	mongoose,
@@ -156,6 +194,8 @@ const {
 	openWeather,
 	orm,
 	passport,
+	quickEmailVerification,
+	react,
 	scss,
 	sequelize,
 	ticketMaster,
@@ -163,6 +203,17 @@ const {
 } = TAG_NAMES;
 
 export const PORTFOLIO_DATA = {
+	'calen': {
+		name: 'Calen',
+		imageUrl: './Calen.png',
+		imageCaption: 'Calen screen image',
+        githubUrl: 'https://github.com/cynwong/Calen',
+        deployedUrl: 'https://calen-cw.herokuapp.com/',
+        summary: 'Multi-purpose online organizer',
+        description: 'Calen is a multi-purpose online organizer application. In this project, I was using multiple new technologies learning and developing as I went. Calen was a solo project and development duration was given as two week.',
+        mainTags: [react, node, fullCalendar, typescript, materialUi, mongoose],
+        otherTags: [mongoDB, express, axios, ajax, passport, agile, quickEmailVerification, moment, eslint, cookie, indexedDB]
+    },
 	'recipelover': {
 		name: 'Recipe Lover',
 		imageUrl: './RecipeLover.png',
