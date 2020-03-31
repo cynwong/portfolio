@@ -30,7 +30,7 @@ export const TAG_NAMES = {
 		category: 'api'
 	},
 	axios: {
-		label:  'AJAX',
+		label:  'AXIOS',
 		category: 'js'
 	},
     bootstrap : {
