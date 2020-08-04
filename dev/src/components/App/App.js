@@ -22,8 +22,14 @@ import ProjectDetail from '../../Pages/ProjectDetail';
 import AppContext from '../../utils/AppContext';
 
 // style
-import './App.scss';
+// import './App.scss';
+import {
+	Wrapper,
+	Background,
+	Main
+} from './Styles';
 
+import backgroundImage from '../../images/background.jpg';
 // data 
 import { PORTFOLIO_DATA } from '../../data';
 
@@ -59,9 +65,12 @@ function App() {
 	return (
 		<Router>
 			<AppContext.Provider value={appContext}>
-				<div className='wrapper'>
+				<Wrapper
+					filePath={backgroundImage}
+				>
+					<Background />
 					<Header />
-					<main ref={mainRef}>
+					<Main ref={mainRef}>
 						{appContext.isMobile && <NavMenu />}
 						{!openMenu && (
 							<Switch>
@@ -73,9 +82,9 @@ function App() {
 								<Route path='*'><Redirect to='/' /></Route>
 							</Switch>
 						)}
-					</main>
+					</Main>
 					<Footer />
-				</div>
+				</Wrapper>
 			</AppContext.Provider>
 		</Router>
 	);
