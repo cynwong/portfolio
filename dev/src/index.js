@@ -6,7 +6,6 @@ import App from './components/App/App';
 
 // style
 import './reset.scss';
-import './scssLib/_font.scss';
 
 // Additional js files
 import * as serviceWorker from './serviceWorker';
