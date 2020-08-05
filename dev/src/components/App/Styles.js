@@ -23,6 +23,18 @@ export const Colors = {
 	jewel: '#13660c', //testing
 };
 
+export const borderRadius = '10px';
+
+export const pillCorner = '50px';
+
+export const breakpoints = {
+	xs: '350px',
+	sm: '576px',
+	md: '768px',
+	lg: '992px',
+	xl: '1200px'
+}
+
 export const GlobalStyles = createGlobalStyle`
 	@font-face {
 		font-family: 'Cedarville Cursive', cursive;
@@ -41,22 +53,25 @@ export const GlobalStyles = createGlobalStyle`
 
 	:root {
 		font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-		font-size: 12px;
+		font-size: 16px;
 
 		margin: 0;
 	}
+
+	@media (max-width: ${breakpoints.sm}) {
+		:root {
+			font-size: 13px;
+		}
+	}
+
+	@media (max-width: ${breakpoints.xs}) {
+		:root { 
+			font-size: 10px;
+		}
+		
+	}
 `;
 
-export const borderRadius = '10px';
-
-export const pillCorner = '50px';
-
-export const breakpoints = {
-	xs: '576px',
-	sm: '768px',
-	md: '992px',
-	lg: '1200px'
-}
 
 export const Wrapper = styled.div`
 	--bgColor: ${Colors.blackPearl};
