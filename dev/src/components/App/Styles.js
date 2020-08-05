@@ -7,6 +7,7 @@ export const Colors = {
 	blackPearl: '#101217',
 	smoky: '#636365',
 	frenchRose: '#f141a0',
+	deepCerise: '#d84293',
 	snowDrift: '#e9e9e7',
 
 	// border colors
