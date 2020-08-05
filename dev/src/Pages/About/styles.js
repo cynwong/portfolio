@@ -38,28 +38,3 @@ export const Paragraph = styled.p`
 	}
 `;
 
-export const Button = styled.button`
-	&& {
-		display: block;
-
-		width: 9rem;
-		margin: 3rem auto;
-		padding: 1rem;
-
-		border-radius: ${pillCorner};
-		border: 1px solid ${Colors.snowDrift};
-		
-		color: ${Colors.snowDrift};
-		text-align: center;
-
-		transition: all 1s ease-in-out;
-		
-		&:hover, &:focus, &:active {
-			background-color: ${Colors.frenchRose};
-
-			border-color: ${Colors.frenchRose};
-
-			transform: scale(1.2);
-		}
-	}
-`;
