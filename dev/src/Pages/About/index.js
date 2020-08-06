@@ -4,8 +4,9 @@ import React, { useContext, useEffect } from 'react';
 
 import AppContext from '../../utils/AppContext';
 
+import Section from '../../Components/Section/Section';
+
 import {
-	Section,
 	Header,
 	Paragraph
 } from './styles';
