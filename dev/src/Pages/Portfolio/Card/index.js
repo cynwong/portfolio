@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-import Tag from '../Tag';
+import Tag from '../../../Components/Tag';
 
 import './styles.scss';
 
