@@ -1,11 +1,15 @@
 import React, { useContext, useState, useEffect } from 'react';
 
-import Card from '../../components/Card';
+import Card from './Card';
 import SearchInput from './SearchInput';
 
-import './styles.scss';
-
 import AppContext from '../../utils/AppContext';
+
+import {
+	Box,
+	Search,
+	Projects
+} from './styles';
 
 export default function Portfolio() {
 	const { portfolioData, mainRef } = useContext(AppContext);
@@ -43,13 +47,27 @@ export default function Portfolio() {
 	} 
 
 	return (
-		<section className='portfolio'>
-			<div className="search-container">
-				<SearchInput search={search} onSearchInputChange={onSearchInputChange} />
-			</div>
-			<div className='projects-container'>
-				{Object.entries(projects).map(([key, project]) => <Card project={project} id={key} key={key} />)}
-			</div>
-		</section>
+		<Box>
+			<Search>
+				<SearchInput
+					search={search} onSearchInputChange={onSearchInputChange} 
+				/>
+			</Search>
+			<Projects>
+			{
+				Object.entries(projects).map(([key, project]) => (
+					<Card project={project} id={key} key={key} />
+				))
+			}
+			</Projects>
+		</Box>
+		// <section className='portfolio'>
+		// 	<div className="search-container">
+		// 		<SearchInput search={search} onSearchInputChange={onSearchInputChange} />
+		// 	</div>
+		// 	<div className='projects-container'>
+		// 		{Object.entries(projects).map(([key, project]) => <Card project={project} id={key} key={key} />)}
+		// 	</div>
+		// </section>
 	)
 }
