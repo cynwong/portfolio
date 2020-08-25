@@ -3,7 +3,10 @@ import { NavLink } from 'react-router-dom';
 
 import Tag from '../../../Components/Tag';
 
-import './styles.scss';
+import {
+	Box,
+	CardBox,
+} from './styles';
 
 export default function Card(props) {
 	const {
@@ -13,16 +16,14 @@ export default function Card(props) {
 		mainTags: tags,
 		summary
 	} = props.project;
-	const images = require.context('../../images/projects', true);
+	const images = require.context('../../../images/projects', true);
 	return (
-		<div className='card-container'>
-			<div className='card'>
+		<Box>
+			<CardBox>
 				<div className="card-front">
 					<img 
 						className='card-front-image' 
 						src={images(imageUrl)}
-						// data-src={images(imageUrl)}
-						// src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mOMrgcAATsA3BT31OAAAAAASUVORK5CYII=" 
 						alt={imageCaption}
 					/>
 					<div className="card-front-title">{name}</div>
@@ -40,7 +41,7 @@ export default function Card(props) {
 						Learn More &gt;
 					</NavLink>
 				</div>
-			</div>
-		</div>
+			</CardBox>
+		</Box>
 	);
 }
