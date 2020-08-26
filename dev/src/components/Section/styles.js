@@ -4,7 +4,7 @@ import { rgba } from 'polished';
 import {
 	Colors,
 	borderRadius
-} from '../App/styles';
+} from '../../utils/StyleConstants';
 
 export const Section = styled.section`
 	max-width: 90%;
@@ -17,6 +17,10 @@ export const Section = styled.section`
 	right: 5%;
 
 	border-radius: ${borderRadius};
+
+	overflow: hidden;
 	
 	background: ${rgba(Colors.blackPearl, 0.75)};
+
+	cursor: default;
 `;
