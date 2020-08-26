@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
 	Colors
-} from '../../../Components/App/styles';
+} from '../../../utils/StyleConstants';
 
 export const Container = styled.div`
 	display: block;

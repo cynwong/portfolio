@@ -1,7 +1,7 @@
 
 import styled from 'styled-components';
 
-import { Colors } from '../../Components/App/styles';
+import { Colors } from '../../utils/StyleConstants';
 
 export const Header = styled.h1`
 	margin-bottom: 2rem;

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import {
 	Colors,
 	pillCorner
-} from '../../Components/App/styles';
+} from '../../utils/StyleConstants';
 
 export const Box = styled.div`
 
