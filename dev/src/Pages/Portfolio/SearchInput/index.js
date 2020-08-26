@@ -1,12 +1,11 @@
 import React from 'react';
 
-import './styles.scss';
+import { SearchBox } from './styles';
 
-export default function InputText(props) {
+export default function InputText (props) {
 	const { search, onSearchInputChange } = props;
 	return (
-		<input
-			className='search-box'
+		<SearchBox
 			type='text'
 			placeholder='Search...'
 			value={search}
