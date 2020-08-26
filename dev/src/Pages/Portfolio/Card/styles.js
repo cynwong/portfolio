@@ -14,6 +14,8 @@ export const CardBox = styled.div`
 
 	position: relative;
 
+	box-sizing: border-box;
+
 	transform-style: preserve-3d;
 	transform-origin: center right;
 	transition: all .5s ease-in-out;
@@ -27,12 +29,15 @@ export const CardBox = styled.div`
 		bottom: 0;
 		left: 0;
 		right: 0;
+
+		backface-visibility: hidden;
 	}
 `;
 
 export const Box = styled.div`
-	height: 15rem;
-	flex-basis: 350px;
+	width: 350px;
+	height: 25rem;
+	flex-basis: 100%;
 
 	margin: 1rem auto;
 	padding: 5px 10px;
@@ -54,17 +59,18 @@ export const Box = styled.div`
 
 	@media all and (min-width: ${breakpoints.sm}){
 		& {
+			height: 15rem;
 			flex-basis: 45%;
 		}
 	}
 
-	@media all and (min-width: ${breakpoints.md}){
+	@media all and (min-width: ${breakpoints.lg}){
 		& {
 			flex-basis: 30%;
 		}
 	}
 
-	@media all and (min-width: ${breakpoints.lg}){
+	@media all and (min-width: ${breakpoints.xl}){
 		& {
 			flex-basis: 28%;
 		}
@@ -121,8 +127,8 @@ export const CardTitle = styled.h1`
 `;
 
 export const CardContent = styled.div`
-	width: 90%;
-	height: 89%;
+	width: 94%;
+	height: 94%;
 
 	padding: 1rem 1.2rem;
 
