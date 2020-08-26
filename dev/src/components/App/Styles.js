@@ -3,6 +3,10 @@ import { rgba } from 'polished';
 
 import image from '../../images/background.jpg';
 
+import {
+	breakpoints,
+	Colors,
+} from '../../utils/StyleConstants';
 
 export const GlobalStyles = createGlobalStyle`
 	@font-face {
