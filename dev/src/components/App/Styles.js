@@ -27,8 +27,13 @@ export const GlobalStyles = createGlobalStyle`
 	:root {
 		font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 		font-size: 16px;
+	}
 
+	:root > * {
 		margin: 0;
+		padding: 0;
+
+		box-sizing: border-box;
 	}
 
 	@media (max-width: ${breakpoints.sm}) {
