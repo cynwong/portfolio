@@ -1,11 +1,19 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+
 
 import Tag from '../../../Components/Tag';
 
 import {
 	Box,
 	CardBox,
+	CardFront,
+	CardImage,
+	CardTitle,
+	CardContent,
+	CardContentTitle,
+	TagBox,
+	ContentBody,
+	MoreLink
 } from './styles';
 
 export default function Card(props) {
@@ -20,27 +28,35 @@ export default function Card(props) {
 	return (
 		<Box>
 			<CardBox>
-				<div className="card-front">
-					<img 
+				<CardFront>
+					<CardImage 
 						className='card-front-image' 
 						src={images(imageUrl)}
 						alt={imageCaption}
 					/>
-					<div className="card-front-title">{name}</div>
-				</div>
-				<div className='card-content'>
-					<h5 className='card-content-title'>{name}</h5>
-					<ul className='card-content-tags'>
-						{tags.map((tag, index) => <Tag tag={tag} key={index}/>)}
-					</ul>
-					<p className='card-content-body'>{summary}</p>
-					<NavLink 
-						className='btn btn-more'
-						to={`projects/${props.id}`}
-					>
-						Learn More &gt;
-					</NavLink>
-				</div>
+					<CardTitle>{name}</CardTitle>
+				</CardFront>
+				<CardContent>
+					<CardContentTitle>{name}</CardContentTitle>
+					<TagBox>
+						{
+							tags.map((tag, index) => (
+								<Tag 
+									tag={tag}
+									key={index}
+								/>
+							))
+						}
+					</TagBox>
+					<ContentBody>
+						{summary}
+						<MoreLink 
+							to={`projects/${props.id}`}
+						>
+							Learn More &gt;
+						</MoreLink>
+					</ContentBody>
+				</CardContent>
 			</CardBox>
 		</Box>
 	);
